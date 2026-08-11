@@ -1,6 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { asset } from '../lib/assets'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -34,6 +35,8 @@ export default function ForDevsPage() {
     desc: string
   }>
 
+  const interests = t('devs.interests', { returnObjects: true }) as string[]
+
   return (
     <>
       <Helmet>
@@ -48,7 +51,7 @@ export default function ForDevsPage() {
       <section className="relative pt-32 pb-20 section-padding overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="/assets/pc2.jpg"
+            src={asset('assets/pc2.jpg')}
             alt=""
             className="w-full h-full object-cover object-center opacity-20"
           />
@@ -72,7 +75,7 @@ export default function ForDevsPage() {
             {/* Avatar */}
             <motion.div variants={fadeUp} className="shrink-0">
               <img
-                src="/avatar.png"
+                src={asset('avatar.png')}
                 alt="Marcin Krzysztoszek"
                 className="w-32 h-32 lg:w-40 lg:h-40 rounded-3xl object-cover border-2 border-brand-primary/40 shadow-glow"
               />
@@ -244,6 +247,32 @@ export default function ForDevsPage() {
                   <span className="font-body text-sm text-text-muted shrink-0">{tr.year}</span>
                 </motion.div>
               ))}
+            </motion.div>
+
+            {/* Interests */}
+            <motion.div
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={stagger}
+            >
+              <motion.h2
+                variants={fadeUp}
+                className="font-display font-bold text-2xl text-white mb-8 pb-3 border-b border-surface-border"
+              >
+                {t('devs.interestsTitle')}
+              </motion.h2>
+
+              <motion.div variants={fadeUp} className="flex flex-wrap gap-2">
+                {interests.map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1.5 rounded-full bg-surface-card border border-surface-border text-sm font-body text-text-secondary hover:border-brand-primary/40 hover:text-white transition-colors duration-200"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </motion.div>
             </motion.div>
 
             {/* CV CTA */}

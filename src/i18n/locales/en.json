@@ -186,6 +186,14 @@
         "desc": "Meetup focused on effective use of Cursor in everyday developer work."
       }
     ],
+    "interestsTitle": "Interests",
+    "interests": [
+      "F1",
+      "Darts",
+      "Warhammer",
+      "Forest & nature",
+      "DIY & tinkering"
+    ],
     "cvCta": "After reviewing my profile I'm happy to send my full CV.",
     "cvBtn": "Send me an offer",
     "linkedin": "LinkedIn",

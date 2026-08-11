@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { asset } from '../lib/assets'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -9,7 +10,7 @@ export default function Footer() {
     <footer className="border-t border-surface-border bg-surface-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <img src="/logo_icon.png" alt="AddPattern" className="h-7 w-auto opacity-70" />
+          <img src={asset('logo_icon.png')} alt="AddPattern" className="h-7 w-auto opacity-70" />
           <span className="text-text-muted text-sm font-body">{t('footer.tagline')}</span>
         </div>
 

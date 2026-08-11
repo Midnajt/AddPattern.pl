@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { asset } from '../lib/assets'
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -9,7 +10,7 @@ export default function Contact() {
       {/* Background — Warsaw sunset full-bleed */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/assets/warsaw-sunset.jpg"
+          src={asset('assets/warsaw-sunset.jpg')}
           alt=""
           className="w-full h-full object-cover object-center"
         />

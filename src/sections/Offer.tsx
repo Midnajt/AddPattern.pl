@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { asset } from '../lib/assets'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -45,7 +46,7 @@ export default function Offer() {
         >
           {/* Large brand logo */}
           <motion.img
-            src="/logo.png"
+            src={asset('logo.png')}
             alt="AddPattern"
             initial={{ opacity: 0, y: -16 }}
             whileInView={{ opacity: 1, y: 0 }}

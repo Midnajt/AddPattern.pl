@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitch from './LanguageSwitch'
+import { asset } from '../lib/assets'
 
 const NAV_ITEMS = ['offer', 'portfolio', 'process', 'contact'] as const
 
@@ -46,7 +47,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center group">
             <img
-              src="/logo_icon.png"
+              src={asset('logo_icon.png')}
               alt="AddPattern"
               className="h-14 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
             />

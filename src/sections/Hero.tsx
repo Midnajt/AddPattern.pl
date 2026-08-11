@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { asset } from '../lib/assets'
 
 const container = {
   hidden: {},
@@ -42,7 +43,7 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/assets/pc.jpg"
+          src={asset('assets/pc.jpg')}
           alt=""
           className="w-full h-full object-cover object-center"
         />

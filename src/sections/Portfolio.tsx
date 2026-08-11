@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
+import { asset } from '../lib/assets'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -17,10 +18,10 @@ const item = {
 }
 
 const IMAGES: Record<string, string> = {
-  wesele: '/assets/warsaw-sunset.jpg',
-  pianos: '/assets/mermaid.jpg',
-  turbo: '/assets/pc2.jpg',
-  kwiaciarnia: '/assets/flower.jpg',
+  wesele: asset('assets/warsaw-sunset.jpg'),
+  pianos: asset('assets/mermaid.jpg'),
+  turbo: asset('assets/pc2.jpg'),
+  kwiaciarnia: asset('assets/flower.jpg'),
 }
 
 export default function Portfolio() {

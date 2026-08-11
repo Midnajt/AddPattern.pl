@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 // '/REPO-NAME/' for project pages — update before deploying
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/AddPattern.github.io/',
 })

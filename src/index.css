@@ -17,7 +17,8 @@
   --brand-gradient: linear-gradient(135deg, #32D6D1 0%, #3E8EFF 35%, #7B5CFF 70%, #D87AFB 100%);
   /* Brighter stops for clipped text — better contrast on dark surfaces */
   --brand-gradient-text: linear-gradient(135deg, #5AF0EB 0%, #6BA3FF 40%, #A08CFF 72%, #E9A0FF 100%);
-  --brand-gradient-text-mobile: linear-gradient(135deg, #7DFFF9 0%, #8BB8FF 38%, #C4B0FF 72%, #F5C0FF 100%);
+  /* OLED / mobile buttons — lifted midtones so AMOLED doesn't crush them */
+  --brand-gradient-mobile: linear-gradient(135deg, #6EFFF8 0%, #8EC0FF 45%, #D2C0FF 100%);
 }
 
 @layer base {
@@ -47,24 +48,37 @@
     color: #5AF0EB; /* fallback if background-clip is unsupported */
   }
 
-  /* Mobile / narrow viewports: lift luminance + soft glow for outdoor/low-end screens */
+  /*
+   * Mobile (esp. Samsung AMOLED): background-clip text + mid/dark gradient stops
+   * get crushed nearly black. Use solid bright fill + glow instead of clipped gradient.
+   */
   @media (max-width: 767px) {
     .text-gradient {
-      background: var(--brand-gradient-text-mobile);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      color: #7DFFF9;
-      filter: drop-shadow(0 0 10px rgba(125, 255, 249, 0.35));
-    }
-  }
-
-  @media (max-width: 767px) and (prefers-contrast: more) {
-    .text-gradient {
-      background: none;
-      -webkit-text-fill-color: #7DFFF9;
-      color: #7DFFF9;
+      background: none !important;
+      -webkit-background-clip: border-box;
+      background-clip: border-box;
+      -webkit-text-fill-color: #9EFFF9;
+      color: #9EFFF9;
       filter: none;
+      text-shadow:
+        0 0 10px rgba(158, 255, 249, 0.7),
+        0 0 24px rgba(180, 160, 255, 0.45);
+    }
+
+    .bg-brand-gradient {
+      background-image: var(--brand-gradient-mobile) !important;
+      box-shadow:
+        0 0 18px rgba(110, 255, 248, 0.5),
+        0 0 36px rgba(142, 192, 255, 0.35) !important;
+    }
+
+    /* Secondary/muted copy also reads darker on OLED */
+    .text-text-secondary {
+      color: #D0D7EB !important;
+    }
+
+    .text-text-muted {
+      color: #A8B0C4 !important;
     }
   }
 

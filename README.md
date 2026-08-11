@@ -1,12 +1,50 @@
 # AddPattern — strona firmowa
 
-Strona portfolio / ofertowa firmy **AddPattern · Marcin Krzysztoszek**.
+> Strona portfolio i ofertowa firmy **AddPattern · Marcin Krzysztoszek**  
+> Tworzę nowoczesne strony internetowe dla małych i średnich firm — od projektu po domenę, hosting, reklamy i analitykę.
 
-Tech stack: **Vite + React + TypeScript + Tailwind CSS + Framer Motion + react-i18next**
+🔗 **Live:** *(zostanie uzupełnione po publikacji)*
 
 ---
 
-## Szybki start (lokalnie)
+## O projekcie
+
+Dwujęzyczna (PL/EN) strona wizytówkowa skierowana do klientów biznesowych oraz rekruterów/partnerów technicznych. Zbudowana jako SPA z routingiem po stronie klienta i deployem na GitHub Pages.
+
+### Strony
+
+| Ścieżka | Opis |
+|---|---|
+| `/` | Strona główna — oferta, portfolio, proces, kontakt |
+| `/#/dla-devow` | Profil dewelopera — CV, tech stack, doświadczenie, events |
+
+### Sekcje strony głównej
+
+- **Hero** — pełnoekranowy, animowany nagłówek z CTA
+- **Oferta** — Landing Page, Sklep, WordPress, Blog + usługi dodatkowe (hosting, domeny, Google Ads, raporty)
+- **Portfolio** — 4 zrealizowane projekty z linkami
+- **Proces** — 4 kroki współpracy: Brief → Projekt → Wdrożenie → Utrzymanie
+- **Kontakt** — mailto CTA
+
+---
+
+## Tech Stack
+
+| Technologia | Rola |
+|---|---|
+| [React 18](https://react.dev/) | framework UI |
+| [TypeScript](https://www.typescriptlang.org/) | statyczne typowanie |
+| [Vite](https://vitejs.dev/) | bundler i dev server |
+| [Tailwind CSS v3](https://tailwindcss.com/) | stylowanie (utility-first) |
+| [Framer Motion](https://www.framer.com/motion/) | animacje i przejścia |
+| [React Router v6](https://reactrouter.com/) | routing (HashRouter) |
+| [react-i18next](https://react.i18next.com/) | internacjonalizacja PL / EN |
+| [react-helmet-async](https://github.com/staylor/react-helmet-async) | SEO meta tags |
+| [GitHub Actions](https://docs.github.com/en/actions) | CI/CD → GitHub Pages |
+
+---
+
+## Szybki start
 
 ```bash
 npm install
@@ -14,62 +52,6 @@ npm run dev
 ```
 
 Otwórz `http://localhost:5173`.
-
----
-
-## Checklista publikacji na GitHub Pages
-
-### 1. Utwórz repo na GitHub
-- Wejdź na https://github.com/new
-- Nazwa repo np. `addpattern-site` (lub `Midnajt.github.io` dla strony głównej użytkownika)
-- Ustaw jako **Public**
-
-### 2. Skonfiguruj `base` w Vite
-
-Otwórz `vite.config.ts`:
-
-- **Project page** (adres: `https://midnajt.github.io/addpattern-site/`):
-  ```ts
-  base: '/addpattern-site/',
-  ```
-- **User/org page** (repo musi nazywać się `Midnajt.github.io`, adres: `https://midnajt.github.io/`):
-  ```ts
-  base: '/',
-  ```
-- **Własna domena** (po późniejszym dodaniu CNAME):
-  ```ts
-  base: '/',
-  ```
-
-### 3. Wypchnij kod
-
-```bash
-git add .
-git commit -m "Initial release"
-git remote add origin https://github.com/Midnajt/NAZWA-REPO.git
-git push -u origin main
-```
-
-### 4. Włącz GitHub Pages
-
-W ustawieniach repo:
-- Settings → Pages → Source → **GitHub Actions**
-
-Przy pierwszym pushu workflow `.github/workflows/deploy.yml` automatycznie zbuduje i opublikuje stronę.
-
-### 5. Sprawdź stronę
-
-- Otwórz `https://midnajt.github.io/NAZWA-REPO/` (lub `https://midnajt.github.io/` dla user page)
-- Zweryfikuj: routing (`/#/dla-devow`), zdjęcia, mailto, przełącznik języka
-
-### 6. (Opcjonalnie) Własna domena
-
-1. Kup domenę (np. addpattern.pl)
-2. W DNS dodaj rekord CNAME: `www` → `midnajt.github.io`
-3. Utwórz plik `public/CNAME` z treścią `addpattern.pl`
-4. W `vite.config.ts` ustaw `base: '/'`
-5. W Settings → Pages wpisz domenę custom
-6. Zaktualizuj `public/robots.txt` i `public/sitemap.xml`
 
 ---
 
@@ -82,6 +64,20 @@ npm run preview   # lokalne podejrzenie buildu
 
 ---
 
+## Deploy — GitHub Pages
+
+Szczegółowa instrukcja krok po kroku znajduje się w [`.cursor/report/todo-github-pages.md`](.cursor/report/todo-github-pages.md).
+
+**Skrót:**
+
+1. Utwórz repo na GitHub (Public)
+2. Ustaw `base` w `vite.config.ts` (`'/'` lub `'/nazwa-repo/'`)
+3. Wypchnij kod na branch `main`
+4. W Settings → Pages → Source → **GitHub Actions**
+5. Każdy kolejny `git push` deploye automatycznie
+
+---
+
 ## Struktura projektu
 
 ```
@@ -90,14 +86,15 @@ src/
   sections/       Hero, Offer, Portfolio, Process, Contact
   pages/          HomePage, ForDevsPage
   i18n/           i18n.ts + locales/pl.json + locales/en.json
-  index.css       tokeny CSS + Tailwind
+  index.css       tokeny CSS AddPattern + Tailwind directives
 public/
-  assets/         stockowe zdjęcia
+  assets/         zdjęcia stockowe
   logo*.png       logo bez tła
   avatar.png      zdjęcie profilowe
-  robots.txt
-  sitemap.xml
-.github/workflows/deploy.yml  — GitHub Actions CI/CD
+  robots.txt, sitemap.xml
+.github/
+  workflows/
+    deploy.yml    GitHub Actions CI/CD
 ```
 
 ---
@@ -105,11 +102,30 @@ public/
 ## Aktualizacja treści
 
 Wszystkie teksty są w plikach i18n:
-- **Polski:** `src/i18n/locales/pl.json`
-- **Angielski:** `src/i18n/locales/en.json`
+- `src/i18n/locales/pl.json` — wersja polska
+- `src/i18n/locales/en.json` — wersja angielska
 
-Zdjęcia portfolio → `public/assets/` (docelowo podmień stocki na screenshoty projektów).
+Screenshoty portfolio → `public/assets/` (aktualnie stockowe zdjęcia, do podmiany).
 
 ---
 
-Dalsze kroki po publikacji → [`TODO.md`](TODO.md)
+## Design System
+
+Projekt korzysta z design systemu **AddPattern** zdefiniowanego w `docs/docs.md`:
+
+- **Motyw:** ciemny (`#09090B` background)
+- **Gradient marki:** `#32D6D1 → #3E8EFF → #7B5CFF → #D87AFB`
+- **Fonty:** Sora (nagłówki) + DM Sans (body)
+- **Inspiracje:** Linear, Vercel, Raycast
+
+---
+
+## Narzędzia
+
+Projekt został stworzony z wykorzystaniem **[Cursor](https://cursor.com)** — edytora kodu z wbudowanym AI, który przyspieszył projektowanie architektury, generowanie komponentów i iterowanie nad UI.
+
+---
+
+## Dalsze kroki
+
+Lista zadań powykonawczych → [`TODO.md`](TODO.md)

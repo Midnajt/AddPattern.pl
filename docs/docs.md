@@ -104,3 +104,9 @@ The design should feel modern, minimalistic, friendly and premium. Use
 rounded corners, subtle gradients, soft glow effects, large spacing and
 smooth animations. Brand identity should communicate software
 engineering, creativity and reliability.
+
+Dotychczasowe prace:
+domweselnyagata.pl
+lewandowskipianos.pl
+turbofinder20.cermotor.com.pl
+kwiaciarniawwildze.pl

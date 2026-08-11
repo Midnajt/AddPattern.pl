@@ -69,7 +69,7 @@ export default function InterestsCarousel() {
         onFocusCapture={() => setPaused(true)}
         onBlurCapture={() => setPaused(false)}
       >
-        {/* 16:9 — matches images/assets/2.jfif (1600×900) */}
+        {/* 16:9 — matches interests/2.jfif (1600×900) */}
         <div className="relative aspect-video">
           <AnimatePresence initial={false} custom={direction} mode="popLayout">
             <motion.button

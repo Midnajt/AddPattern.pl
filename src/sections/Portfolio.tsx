@@ -20,7 +20,7 @@ const item = {
 const IMAGES: Record<string, string> = {
   wesele: asset('assets/warsaw-sunset.jpg'),
   pianos: asset('assets/mermaid.jpg'),
-  turbo: asset('assets/pc2.jpg'),
+  dental: asset('assets/pc2.jpg'),
   kwiaciarnia: asset('assets/flower.jpg'),
 }
 

@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { asset } from '../lib/assets'
+import InterestsCarousel from '../components/InterestsCarousel'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -12,6 +13,17 @@ const stagger = {
   hidden: {},
   show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 }
+
+/** Technologies used every day — highlighted in the stack list */
+const DAILY_STACK = new Set([
+  'React',
+  'Styled-components',
+  'Node.js',
+  'Express',
+  'MySQL',
+  'Cursor',
+  'MySQL Workbench',
+])
 
 export default function ForDevsPage() {
   const { t } = useTranslation()
@@ -156,6 +168,17 @@ export default function ForDevsPage() {
                 {t('devs.stackTitle')}
               </motion.h2>
 
+              <motion.div
+                variants={fadeUp}
+                className="flex items-center gap-2.5 mb-7 text-xs font-body text-text-secondary"
+              >
+                <span
+                  className="inline-block w-3.5 h-3.5 rounded-full border-2 border-brand-primary bg-brand-primary/10 shrink-0"
+                  aria-hidden
+                />
+                {t('devs.stackLegend')}
+              </motion.div>
+
               <div className="flex flex-col gap-7">
                 {Object.values(stack).map((group) => (
                   <motion.div key={group.label} variants={fadeUp}>
@@ -163,14 +186,21 @@ export default function ForDevsPage() {
                       {group.label}
                     </p>
                     <div className="flex flex-wrap gap-2">
-                      {group.items.map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 rounded-full bg-surface-card border border-surface-border text-xs font-body text-text-secondary hover:border-brand-primary/40 hover:text-white transition-colors duration-200"
-                        >
-                          {skill}
-                        </span>
-                      ))}
+                      {group.items.map((skill) => {
+                        const daily = DAILY_STACK.has(skill)
+                        return (
+                          <span
+                            key={skill}
+                            className={
+                              daily
+                                ? 'px-3 py-1 rounded-full bg-brand-primary/10 border-2 border-brand-primary text-xs font-body text-white'
+                                : 'px-3 py-1 rounded-full bg-surface-card border border-surface-border text-xs font-body text-text-secondary hover:border-brand-primary/40 hover:text-white transition-colors duration-200'
+                            }
+                          >
+                            {skill}
+                          </span>
+                        )
+                      })}
                     </div>
                   </motion.div>
                 ))}
@@ -272,6 +302,10 @@ export default function ForDevsPage() {
                     {item}
                   </span>
                 ))}
+              </motion.div>
+
+              <motion.div variants={fadeUp}>
+                <InterestsCarousel />
               </motion.div>
             </motion.div>
 

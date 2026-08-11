@@ -1,10 +1,17 @@
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { asset } from '../lib/assets'
 
 export default function Footer() {
   const { t } = useTranslation()
+  const location = useLocation()
   const year = new Date().getFullYear()
+
+  function scrollIfSame(path: string) {
+    if (location.pathname === path) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
 
   return (
     <footer className="border-t border-surface-border bg-surface-bg">
@@ -14,13 +21,21 @@ export default function Footer() {
           <span className="text-text-muted text-sm font-body">{t('footer.tagline')}</span>
         </div>
 
-        <div className="flex items-center gap-6 text-xs text-text-muted font-body">
-          <Link to="/dla-devow" className="hover:text-brand-primary transition-colors">
+        <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-text-muted font-body">
+          <Link
+            to="/dla-devow"
+            onClick={() => scrollIfSame('/dla-devow')}
+            className="hover:text-brand-primary transition-colors"
+          >
             {t('nav.forDevs')}
           </Link>
-          <a href="mailto:midnajt0@gmail.com" className="hover:text-brand-primary transition-colors">
-            midnajt0@gmail.com
-          </a>
+          <Link
+            to="/polityka-cookies"
+            onClick={() => scrollIfSame('/polityka-cookies')}
+            className="hover:text-brand-primary transition-colors"
+          >
+            {t('footer.cookies')}
+          </Link>
           <span>© {year} AddPattern. {t('footer.rights')}</span>
         </div>
       </div>

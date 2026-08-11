@@ -22,6 +22,7 @@ const ICONS: Record<string, string> = {
   shop: '🛒',
   wordpress: '🧩',
   blog: '✍️',
+  support: '🛠️',
 }
 
 export default function Offer() {
@@ -68,7 +69,7 @@ export default function Offer() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-20"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-20"
         >
           {items.map((svc) => (
             <motion.div

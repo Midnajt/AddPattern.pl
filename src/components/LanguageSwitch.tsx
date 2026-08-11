@@ -17,9 +17,9 @@ export default function LanguageSwitch() {
       className="relative flex items-center gap-1 px-3 py-1.5 rounded-full border border-surface-border text-sm font-display font-semibold text-text-secondary hover:text-white hover:border-brand-primary transition-colors duration-200"
       aria-label="Toggle language"
     >
-      <span className={isEn ? 'text-text-muted' : 'text-gradient'}>PL</span>
+      <span className={isEn ? 'text-text-muted' : 'text-brand-primary md:text-gradient'}>PL</span>
       <span className="text-surface-border">|</span>
-      <span className={isEn ? 'text-gradient' : 'text-text-muted'}>EN</span>
+      <span className={isEn ? 'text-brand-primary md:text-gradient' : 'text-text-muted'}>EN</span>
     </motion.button>
   )
 }

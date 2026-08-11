@@ -36,6 +36,11 @@
         "id": "blog",
         "title": "Blog",
         "desc": "A platform for building authority and organic traffic. SEO-integrated from day one."
+      },
+      {
+        "id": "support",
+        "title": "Consulting & technical support",
+        "desc": "I’ll help you choose the right online solutions in plain language. I look after your site day to day — fixes, updates, small outages, and answers when something doesn’t work."
       }
     ],
     "extraTitle": "I also handle",
@@ -44,8 +49,7 @@
       "Hosting setup",
       "Business email addresses",
       "Google Ads campaigns",
-      "Traffic reports for clients",
-      "Technical support"
+      "Traffic reports for clients"
     ]
   },
   "portfolio": {
@@ -81,27 +85,27 @@
   },
   "process": {
     "title": "How we work together",
-    "sub": "A simple process with full transparency at every stage.",
+    "sub": "A simple process with full transparency at every stage — no jargon, no surprises.",
     "steps": [
       {
         "num": "01",
-        "title": "Brief",
-        "desc": "We get to know your business, goal and audience. We define scope and timeline."
+        "title": "Kickoff chat",
+        "desc": "In a relaxed conversation we learn about your business, the goal of the website, and who it should reach. We agree on the scope of work and an approximate timeline. Photos, graphics, logos, and texts are welcome — if you don’t have them, I’ll prepare or generate them for you."
       },
       {
         "num": "02",
-        "title": "Design",
-        "desc": "I create wireframes and the visual design. You approve the look before any coding begins."
+        "title": "Look & feel",
+        "desc": "I guide you through the conversation and gather detailed preferences: what you like, what we’re aiming for, and how your site should look and feel. After that chat I need about a week to prepare the first visual template, which I present for your approval."
       },
       {
         "num": "03",
-        "title": "Launch",
-        "desc": "I build the site, configure domain, hosting and emails. Tested on every device."
+        "title": "Build & go live",
+        "desc": "I build the website, set up your web address (domain), hosting, and business emails. I check that everything works on phone, tablet, and computer — then the site is ready to show the world."
       },
       {
         "num": "04",
-        "title": "Support",
-        "desc": "I'm available after launch. Updates, ads, traffic reports and technical support."
+        "title": "Ongoing support",
+        "desc": "After launch you get one month of care included in the package — during that time you can still request edits and tweaks. I also help with updates, ads, and explain traffic reports in plain language."
       }
     ]
   },
@@ -114,14 +118,124 @@
   },
   "footer": {
     "rights": "All rights reserved.",
-    "tagline": "Building websites for your business."
+    "tagline": "Building websites for your business.",
+    "cookies": "Cookie policy"
+  },
+  "cookies": {
+    "metaTitle": "Cookie policy | AddPattern",
+    "metaDesc": "Information about cookies and similar technologies used on the AddPattern website.",
+    "title": "Cookie policy",
+    "updated": "Last updated: 11 August 2026",
+    "intro": "This Cookie Policy explains how the AddPattern website (the “Site”) uses cookies and similar technologies (such as localStorage). It is informational and applies to the Site operated by AddPattern Marcin Krzysztoszek (Tax ID / NIP: 8262179582).",
+    "sections": [
+      {
+        "title": "1. Controller",
+        "paragraphs": [
+          "The controller of the Site and of data related to cookies / browser storage is AddPattern Marcin Krzysztoszek, Warsaw, Poland.",
+          "Tax ID (NIP): 8262179582",
+          "Contact: midnajt0@gmail.com"
+        ]
+      },
+      {
+        "title": "2. What cookies and similar technologies are",
+        "paragraphs": [
+          "Cookies are small text files stored on your device by the browser when you visit websites. They may be used to make the Site work, remember preferences, or collect statistics.",
+          "Similar technologies (e.g. localStorage, sessionStorage) can also store information in your browser. In this Policy we refer jointly to cookies and such mechanisms where they are used on the Site."
+        ]
+      },
+      {
+        "title": "3. Legal basis",
+        "paragraphs": [
+          "Use of necessary technologies required for the Site to function properly is based on the controller’s legitimate interest (Article 6(1)(f) GDPR) and rules on electronic services.",
+          "If the Site later uses analytics, marketing, or other non-essential cookies, they will only be used after obtaining your consent where required, and you will be able to withdraw that consent at any time."
+        ]
+      },
+      {
+        "title": "4. Technologies we currently use",
+        "paragraphs": [
+          "The Site does not currently use analytics or advertising tools based on third-party cookies (e.g. Google Analytics, Meta Pixel).",
+          "We use the following mechanisms:"
+        ],
+        "list": [
+          "Language preference (localStorage) — remembering the selected interface language (PL/EN) via i18next so the Site can show your preferred language on the next visit.",
+          "Browser technical data — while you use the Site, the browser may process data needed for the connection (e.g. IP address, browser type, operating system). These are standard network/hosting logs, not marketing profiling by the Site.",
+          "Google Fonts — the Site loads fonts from Google servers (fonts.googleapis.com / fonts.gstatic.com). The provider may process technical connection data under Google’s own privacy policy."
+        ]
+      },
+      {
+        "title": "5. Purposes of processing",
+        "paragraphs": [
+          "The technologies described in this Policy are used only to:"
+        ],
+        "list": [
+          "ensure the Site displays and works correctly,",
+          "remember your language preference,",
+          "maintain connection security and stability,",
+          "handle user inquiries (e.g. email contact — outside the cookie mechanism)."
+        ]
+      },
+      {
+        "title": "6. Retention period",
+        "paragraphs": [
+          "The language preference stored in localStorage remains until you remove it (by clearing site data in the browser) or change the language on the Site.",
+          "Technical data on the hosting / infrastructure side may be retained according to server logs and that provider’s policy."
+        ]
+      },
+      {
+        "title": "7. Recipients / third parties",
+        "paragraphs": [
+          "In connection with operating the Site, technical data may be processed by:"
+        ],
+        "list": [
+          "the hosting / publishing provider (e.g. GitHub Pages),",
+          "Google (in relation to loading Google Fonts),",
+          "the email provider — only when you initiate email contact yourself."
+        ]
+      },
+      {
+        "title": "8. Transfers outside the EEA",
+        "paragraphs": [
+          "Using services based outside the European Economic Area (e.g. Google, GitHub) may involve transferring technical data outside the EEA. In such cases, safeguards provided by law (including standard contractual clauses) apply, in line with those providers’ policies."
+        ]
+      },
+      {
+        "title": "9. How to manage cookies and browser data",
+        "paragraphs": [
+          "You can manage cookies and site data at any time in your browser settings, including blocking storage or deleting data already saved. Example locations:"
+        ],
+        "list": [
+          "Google Chrome — Settings → Privacy and security → Cookies and other site data",
+          "Mozilla Firefox — Settings → Privacy & Security",
+          "Safari — Settings → Safari → Advanced / Privacy",
+          "Microsoft Edge — Settings → Cookies and site permissions",
+          "Mobile devices — browser or system privacy settings"
+        ],
+        "paragraphsAfter": [
+          "Restricting necessary technologies may affect some Site features (e.g. remembering the selected language)."
+        ]
+      },
+      {
+        "title": "10. Your rights",
+        "paragraphs": [
+          "To the extent cookies or similar technologies involve personal data processing, you have rights under the GDPR, including access, rectification, erasure, restriction of processing, objection, and the right to lodge a complaint with a supervisory authority (in Poland: the President of the Personal Data Protection Office — UODO).",
+          "For questions about this Policy, contact: midnajt0@gmail.com"
+        ]
+      },
+      {
+        "title": "11. Changes to this Cookie Policy",
+        "paragraphs": [
+          "This Policy may be updated, for example when new tools (analytics, marketing) are added to the Site or when the law changes. The updated version will be published on this page with the last updated date."
+        ]
+      }
+    ]
   },
   "devs": {
     "badge": "Web Developer",
     "name": "Marcin Krzysztoszek",
     "location": "Warsaw · Hybrid / Remote",
-    "about": "I build modern web applications for over 4 years. I bridge frontend and backend and create solutions with real business impact — from e-commerce shops to management systems. AI and productivity tooling enthusiast. I actively attend industry meetups and business events.",
+    "about": "Full-stack developer with 4+ years of experience building applications that genuinely improve business processes — from B2B shops and warehouse systems (WMS) to invoice workflow automation. Day to day I work with React, TypeScript and Node.js plus AI tools (Cursor, Claude Code) to ship quality faster. I’m not afraid of other technologies — I’m also comfortable navigating .NET and PHP. I’m open to growing toward new technologies. In a team, what matters to me is clear communication and hybrid/remote work.",
     "stackTitle": "Tech Stack",
+    "stackLegend": "Technologies outlined in the brighter border are ones I use every day.",
     "stack": {
       "frontend": {
         "label": "Frontend",
@@ -148,13 +262,16 @@
     "exp": [
       {
         "company": "Cer Motor Sp. z o.o.",
-        "period": "2021 – present (~5 years)",
+        "period": "2021 – present",
         "role": "Web Developer",
         "bullets": [
           "Designed and deployed TurboFinder — B2B shop for turbochargers (React, Node.js, Express, MySQL).",
           "Built AgroFinder — agricultural parts shop with multi-path search and cascading filters.",
           "Created Management Dashboard — real-time reporting of stock and inventory statistics.",
           "Co-developed WMS — warehouse management and inventory system (C# / ASP.NET, SQL).",
+          "Implemented a low-code solution (Suncode / PlusWorkflow) for invoice approval workflows and KSeF integration.",
+          "Ran cybersecurity awareness training on KnowBe4 and phishing campaigns to raise employee security awareness.",
+          "Administered Microsoft services (licenses, accounts) and handled device setup and onboarding for new users.",
           "Delivered business card sites and landing pages for the sales department.",
           "Maintained and developed legacy code (PHP, jQuery) in older company systems."
         ]
@@ -188,11 +305,14 @@
     ],
     "interestsTitle": "Interests",
     "interests": [
-      "F1",
+      "Board games",
       "Darts",
-      "Warhammer",
+      "DIY & tinkering",
+      "F1",
       "Forest & nature",
-      "DIY & tinkering"
+      "Skiing",
+      "Warhammer",
+      "World cuisines"
     ],
     "cvCta": "After reviewing my profile I'm happy to send my full CV.",
     "cvBtn": "Send me an offer",

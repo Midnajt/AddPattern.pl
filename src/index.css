@@ -15,6 +15,9 @@
   --text-secondary: #B9C1D9;
   --text-muted: #8B93A7;
   --brand-gradient: linear-gradient(135deg, #32D6D1 0%, #3E8EFF 35%, #7B5CFF 70%, #D87AFB 100%);
+  /* Brighter stops for clipped text — better contrast on dark surfaces */
+  --brand-gradient-text: linear-gradient(135deg, #5AF0EB 0%, #6BA3FF 40%, #A08CFF 72%, #E9A0FF 100%);
+  --brand-gradient-text-mobile: linear-gradient(135deg, #7DFFF9 0%, #8BB8FF 38%, #C4B0FF 72%, #F5C0FF 100%);
 }
 
 @layer base {
@@ -37,10 +40,32 @@
 
 @layer utilities {
   .text-gradient {
-    background: var(--brand-gradient);
+    background: var(--brand-gradient-text);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #5AF0EB; /* fallback if background-clip is unsupported */
+  }
+
+  /* Mobile / narrow viewports: lift luminance + soft glow for outdoor/low-end screens */
+  @media (max-width: 767px) {
+    .text-gradient {
+      background: var(--brand-gradient-text-mobile);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #7DFFF9;
+      filter: drop-shadow(0 0 10px rgba(125, 255, 249, 0.35));
+    }
+  }
+
+  @media (max-width: 767px) and (prefers-contrast: more) {
+    .text-gradient {
+      background: none;
+      -webkit-text-fill-color: #7DFFF9;
+      color: #7DFFF9;
+      filter: none;
+    }
   }
 
   .border-gradient {

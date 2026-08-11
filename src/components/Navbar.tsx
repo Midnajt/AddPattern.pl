@@ -31,6 +31,13 @@ export default function Navbar() {
     setMobileOpen(false)
   }
 
+  function goToForDevs() {
+    setMobileOpen(false)
+    if (location.pathname === '/dla-devow') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   return (
     <>
       <motion.header
@@ -80,6 +87,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-4">
             <Link
               to="/dla-devow"
+              onClick={goToForDevs}
               className="text-sm font-body text-text-muted hover:text-brand-primary transition-colors duration-200"
             >
               {t('nav.forDevs')}
@@ -122,7 +130,7 @@ export default function Navbar() {
             <Link
               to="/dla-devow"
               className="text-base font-body text-brand-primary"
-              onClick={() => setMobileOpen(false)}
+              onClick={goToForDevs}
             >
               {t('nav.forDevs')}
             </Link>

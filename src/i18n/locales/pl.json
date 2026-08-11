@@ -36,6 +36,11 @@
         "id": "blog",
         "title": "Blog",
         "desc": "Platforma do budowania autorytetu i ruchu organicznego. Integracja z SEO od samego początku."
+      },
+      {
+        "id": "support",
+        "title": "Doradztwo i obsługa techniczna",
+        "desc": "Pomogę wybrać dobre rozwiązania online bez zbędnego żargonu. Opiekuję się stroną na co dzień — poprawki, aktualizacje, drobne awarie i pytania, gdy coś nie działa."
       }
     ],
     "extraTitle": "Dodatkowo zajmuję się",
@@ -44,8 +49,7 @@
       "Konfiguracja hostingu",
       "Firmowe adresy e-mail",
       "Reklamy Google Ads",
-      "Raporty ruchu dla klienta",
-      "Wsparcie techniczne"
+      "Raporty ruchu dla klienta"
     ]
   },
   "portfolio": {
@@ -81,27 +85,27 @@
   },
   "process": {
     "title": "Jak działamy razem",
-    "sub": "Prosty proces, pełna przejrzystość na każdym etapie.",
+    "sub": "Prosty proces, pełna przejrzystość na każdym etapie — bez żargonu i niespodzianek.",
     "steps": [
       {
         "num": "01",
-        "title": "Brief",
-        "desc": "Poznajemy Twój biznes, cel i grupę odbiorców. Ustalamy zakres i harmonogram."
+        "title": "Rozmowa startowa",
+        "desc": "Na spokojnej rozmowie poznajemy Twój biznes, cel strony i to, do kogo ma trafiać. Ustalamy zakres prac i przybliżony termin. Mile widziane są zdjęcia, grafiki, logo i teksty — jeśli ich nie masz, zajmę się ich przygotowaniem lub wygenerowaniem."
       },
       {
         "num": "02",
-        "title": "Projekt",
-        "desc": "Tworzę makietę i projekt graficzny. Zatwierdzasz wygląd przed kodowaniem."
+        "title": "Projekt wyglądu",
+        "desc": "Prowadzę Cię przez rozmowę i zbieram szczegółowe wskazówki: co Ci się podoba, do jakiego efektu zmierzamy, jak ma wyglądać i brzmieć Twoja strona. Po takiej rozmowie potrzebuję około tygodnia na pierwszy graficzny szablon, który przedstawiam do akceptacji."
       },
       {
         "num": "03",
-        "title": "Wdrożenie",
-        "desc": "Buduję stronę, konfiguruję domenę, hosting i e-maile. Testuję na każdym urządzeniu."
+        "title": "Budowa i start",
+        "desc": "Składam stronę, podpinam adres internetowy (domenę), hosting i firmowe e-maile. Sprawdzam, czy wszystko działa na telefonie, tablecie i komputerze — potem strona jest gotowa do pokazania światu."
       },
       {
         "num": "04",
-        "title": "Utrzymanie",
-        "desc": "Jestem dostępny po premierze. Aktualizacje, reklamy, raporty i wsparcie techniczne."
+        "title": "Wsparcie dalej",
+        "desc": "Po uruchomieniu strony masz w pakiecie miesiąc opieki z mojej strony — w tym czasie nadal możesz zlecać edycje i poprawki. Pomagam też w aktualizacjach, reklamach i wyjaśniam raporty ruchu w zrozumiały sposób."
       }
     ]
   },
@@ -114,14 +118,124 @@
   },
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone.",
-    "tagline": "Tworzę strony dla Twojego biznesu."
+    "tagline": "Tworzę strony dla Twojego biznesu.",
+    "cookies": "Polityka cookies"
+  },
+  "cookies": {
+    "metaTitle": "Polityka cookies | AddPattern",
+    "metaDesc": "Informacje o plikach cookies i podobnych technologiach używanych na stronie AddPattern.",
+    "title": "Polityka cookies",
+    "updated": "Ostatnia aktualizacja: 11 sierpnia 2026 r.",
+    "intro": "Niniejsza Polityka cookies wyjaśnia, w jaki sposób strona AddPattern (dalej: „Serwis”) wykorzystuje pliki cookies oraz podobne technologie (np. localStorage). Polityka ma charakter informacyjny i dotyczy Serwisu prowadzonego przez AddPattern Marcin Krzysztoszek (NIP: 8262179582).",
+    "sections": [
+      {
+        "title": "1. Administrator",
+        "paragraphs": [
+          "Administratorem Serwisu oraz danych związanych z korzystaniem z cookies / pamięci przeglądarki jest AddPattern Marcin Krzysztoszek, Warszawa.",
+          "NIP: 8262179582",
+          "Kontakt: midnajt0@gmail.com"
+        ]
+      },
+      {
+        "title": "2. Czym są cookies i podobne technologie",
+        "paragraphs": [
+          "Cookies (ciasteczka) to małe pliki tekstowe zapisywane na urządzeniu użytkownika przez przeglądarkę podczas odwiedzania stron internetowych. Mogą być wykorzystywane m.in. do zapewnienia działania Serwisu, zapamiętania preferencji lub prowadzenia statystyk.",
+          "Podobne technologie (np. localStorage, sessionStorage) również pozwalają zapisywać informacje w przeglądarce użytkownika. W tej Polityce odnosimy się łącznie do cookies oraz takich mechanizmów, o ile są wykorzystywane w Serwisie."
+        ]
+      },
+      {
+        "title": "3. Podstawa prawna",
+        "paragraphs": [
+          "Korzystanie z niezbędnych technologii służących prawidłowej pracy Serwisu opiera się na prawnie uzasadnionym interesie administratora (art. 6 ust. 1 lit. f RODO) oraz przepisach dotyczących świadczenia usług drogą elektroniczną.",
+          "Jeżeli w przyszłości Serwis będzie wykorzystywał cookies analityczne, marketingowe lub inne niewymagane do działania strony, ich użycie nastąpi po uzyskaniu zgody użytkownika (o ile będzie to wymagane), którą będzie można w każdej chwili wycofać."
+        ]
+      },
+      {
+        "title": "4. Jakie technologie wykorzystujemy obecnie",
+        "paragraphs": [
+          "Obecnie Serwis nie korzysta z narzędzi analitycznych ani reklamowych opartych o cookies stron trzecich (np. Google Analytics, Meta Pixel).",
+          "Wykorzystujemy następujące mechanizmy:"
+        ],
+        "list": [
+          "Preferencja języka (localStorage) — zapamiętanie wybranego języka interfejsu (PL/EN) przez bibliotekę i18next, aby przy kolejnej wizycie Serwis wyświetlał się w preferowanym języku.",
+          "Dane techniczne przeglądarki — w trakcie korzystania ze strony przeglądarka może automatycznie przetwarzać dane niezbędne do połączenia (np. adres IP, typ przeglądarki, system operacyjny). Są to standardowe logi wynikające z działania sieci i hostingu, a nie celowe profilowanie marketingowe po stronie Serwisu.",
+          "Czcionki Google Fonts — Serwis ładuje fonty z serwerów Google (fonts.googleapis.com / fonts.gstatic.com). Dostawca może przetwarzać dane techniczne połączenia zgodnie z własną polityką prywatności Google."
+        ]
+      },
+      {
+        "title": "5. Cele przetwarzania",
+        "paragraphs": [
+          "Technologie opisane w tej Polityce służą wyłącznie do:"
+        ],
+        "list": [
+          "zapewnienia prawidłowego działania i wyświetlania Serwisu,",
+          "zapamiętania preferencji językowych użytkownika,",
+          "utrzymania bezpieczeństwa i stabilności połączenia,",
+          "realizacji zapytań użytkowników (np. kontakt e-mail — poza mechanizmem cookies)."
+        ]
+      },
+      {
+        "title": "6. Okres przechowywania",
+        "paragraphs": [
+          "Preferencja języka przechowywana w localStorage pozostaje do czasu jej usunięcia przez użytkownika (wyczyszczenie danych strony w przeglądarce) lub zmiany języka w Serwisie.",
+          "Dane techniczne po stronie dostawcy hostingu / infrastruktury mogą być przechowywane przez okres wynikający z logów serwerowych i polityki tego dostawcy."
+        ]
+      },
+      {
+        "title": "7. Odbiorcy / podmioty trzecie",
+        "paragraphs": [
+          "W związku z działaniem Serwisu dane techniczne mogą być przetwarzane przez:"
+        ],
+        "list": [
+          "dostawcę hostingu / publikacji strony (np. GitHub Pages),",
+          "Google (w zakresie ładowania fontów Google Fonts),",
+          "dostawcę poczty e-mail — wyłącznie gdy użytkownik sam nawiąże kontakt mailowy."
+        ]
+      },
+      {
+        "title": "8. Przekazywanie danych poza EOG",
+        "paragraphs": [
+          "Korzystanie z usług podmiotów mających siedzibę poza Europejskim Obszarem Gospodarczym (np. Google, GitHub) może wiązać się z przekazaniem danych technicznych poza EOG. W takich przypadkach stosowane są mechanizmy przewidziane prawem (m.in. standardowe klauzule umowne), zgodnie z politykami tych dostawców."
+        ]
+      },
+      {
+        "title": "9. Jak zarządzać cookies i danymi w przeglądarce",
+        "paragraphs": [
+          "Użytkownik może w każdej chwili zarządzać cookies i danymi stron w ustawieniach przeglądarki, w tym blokować ich zapisywanie lub usuwać już zapisane dane. Poniżej przykładowe miejsca ustawień:"
+        ],
+        "list": [
+          "Google Chrome — Ustawienia → Prywatność i bezpieczeństwo → Pliki cookie i inne dane stron",
+          "Mozilla Firefox — Ustawienia → Prywatność i bezpieczeństwo",
+          "Safari — Ustawienia → Safari → Zaawansowane / Prywatność",
+          "Microsoft Edge — Ustawienia → Pliki cookie i uprawnienia witryny",
+          "Urządzenia mobilne — ustawienia przeglądarki lub systemu w sekcji prywatności"
+        ],
+        "paragraphsAfter": [
+          "Ograniczenie niezbędnych technologii może wpłynąć na działanie niektórych funkcji Serwisu (np. zapamiętanie wybranego języka)."
+        ]
+      },
+      {
+        "title": "10. Prawa użytkownika",
+        "paragraphs": [
+          "W zakresie, w jakim cookies lub podobne technologie wiążą się z przetwarzaniem danych osobowych, użytkownikowi przysługują prawa wynikające z RODO, w tym prawo dostępu do danych, ich sprostowania, usunięcia, ograniczenia przetwarzania, wniesienia sprzeciwu oraz skargi do Prezesa Urzędu Ochrony Danych Osobowych (UODO).",
+          "W sprawach związanych z tą Polityką prosimy o kontakt: midnajt0@gmail.com"
+        ]
+      },
+      {
+        "title": "11. Zmiany Polityki cookies",
+        "paragraphs": [
+          "Polityka może być aktualizowana, np. gdy w Serwisie pojawią się nowe narzędzia (analityka, marketing) lub zmienią się przepisy. Zaktualizowana wersja będzie publikowana na tej stronie wraz z datą ostatniej aktualizacji."
+        ]
+      }
+    ]
   },
   "devs": {
     "badge": "Web Developer",
     "name": "Marcin Krzysztoszek",
     "location": "Warszawa · Hybryda / Zdalnie",
-    "about": "Tworzę nowoczesne aplikacje webowe od ponad 4 lat. Łączę frontend z backendem i buduję rozwiązania z realnym wpływem na biznes — od sklepów e-commerce po systemy zarządzania. Entuzjasta AI i narzędzi przyspieszających pracę. Aktywnie uczestniczę w spotkaniach i meetupach branżowych.",
+    "about": "Full-stack developer z 4+ latami doświadczenia w budowie aplikacji, które realnie usprawniają biznes — od sklepów B2B, przez systemy magazynowe (WMS), po automatyzację obiegu faktur. Na co dzień pracuję z React, TypeScript i Node.js oraz narzędziami AI (Cursor, Claude Code), żeby szybciej dowozić jakość. Nie boję się innych technologii — swobodnie poruszam się też po .NET i PHP. Jestem otwarty na rozwój w kierunku nowych technologii. W zespole liczy się dla mnie jasna komunikacja i praca hybrydowa/zdalna.",
     "stackTitle": "Tech Stack",
+    "stackLegend": "Technologie zaznaczone ramką wykorzystuję każdego dnia.",
     "stack": {
       "frontend": {
         "label": "Frontend",
@@ -148,13 +262,16 @@
     "exp": [
       {
         "company": "Cer Motor Sp. z o.o.",
-        "period": "2021 – teraz (~5 lat)",
+        "period": "2021 – teraz",
         "role": "Web Developer",
         "bullets": [
           "Zaprojektowanie i wdrożenie TurboFinder — sklep B2B z turbosprężarkami (React, Node.js, Express, MySQL).",
           "Budowa AgroFinder — sklep z częściami rolniczo-budowlanymi, wielościeżkowe wyszukiwanie i filtry kaskadowe.",
           "Stworzenie Dashboardu zarządu — raportowanie statystyk towarowych i stanów magazynowych w czasie rzeczywistym.",
           "Współtworzenie WMS — systemu zarządzania magazynem i inwentaryzacji (C# / ASP.NET, SQL).",
+          "Wdrożenie rozwiązania low-code (Suncode / PlusWorkflow) do obiegu i akceptacji faktur oraz integracji z KSeF.",
+          "Organizacja szkoleń z cyberbezpieczeństwa na platformie KnowBe4 oraz kampanii phishingowych podnoszących świadomość pracowników.",
+          "Administrowanie usługami Microsoft (licencje, konta) oraz konfiguracja i onboarding sprzętu dla nowych użytkowników.",
           "Realizacja stron wizytówkowych i landing pages dla działu sprzedaży.",
           "Rozwijanie legacy code (PHP, jQuery) w starszych systemach firmowych."
         ]
@@ -188,11 +305,14 @@
     ],
     "interestsTitle": "Zainteresowania",
     "interests": [
-      "F1",
       "Dart",
-      "Warhammer",
+      "F1",
+      "Kuchnie świata",
       "Las i natura",
-      "Majsterkowanie"
+      "Majsterkowanie",
+      "Narty",
+      "Planszówki",
+      "Warhammer"
     ],
     "cvCta": "Po zapoznaniu się z ofertą chętnie prześlę pełne CV.",
     "cvBtn": "Wyślij mi ofertę",

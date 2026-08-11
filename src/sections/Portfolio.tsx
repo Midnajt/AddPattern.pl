@@ -18,10 +18,10 @@ const item = {
 }
 
 const IMAGES: Record<string, string> = {
-  wesele: asset('assets/warsaw-sunset.jpg'),
-  pianos: asset('assets/mermaid.jpg'),
-  dental: asset('assets/pc2.jpg'),
-  kwiaciarnia: asset('assets/flower.jpg'),
+  wesele: asset('assets/weeding.jpg'),
+  pianos: asset('assets/piano.jpeg'),
+  dental: asset('assets/clinic.png'),
+  kwiaciarnia: asset('assets/flowers.jpg'),
 }
 
 export default function Portfolio() {

@@ -123,9 +123,3 @@ Projekt korzysta z design systemu **AddPattern** zdefiniowanego w `docs/docs.md`
 ## Narzędzia
 
 Projekt został stworzony z wykorzystaniem **[Cursor](https://cursor.com)** — edytora kodu z wbudowanym AI, który przyspieszył projektowanie architektury, generowanie komponentów i iterowanie nad UI.
-
----
-
-## Dalsze kroki
-
-Lista zadań powykonawczych → [`TODO.md`](TODO.md)

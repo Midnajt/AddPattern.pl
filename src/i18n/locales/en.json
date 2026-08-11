@@ -1,0 +1,195 @@
+{
+  "nav": {
+    "offer": "Services",
+    "portfolio": "Portfolio",
+    "process": "Process",
+    "contact": "Contact",
+    "forDevs": "For Devs"
+  },
+  "hero": {
+    "badge": "Web development for business",
+    "headline": "Websites that work for your success",
+    "sub": "From design to domain, hosting, ads and traffic reports — I guide you every step of the way.",
+    "cta": "Let's talk",
+    "ctaSub": "or email midnajt0@gmail.com"
+  },
+  "offer": {
+    "title": "What I can do for you",
+    "sub": "Full online presence — from the first idea to a live website.",
+    "items": [
+      {
+        "id": "landing",
+        "title": "Landing Page",
+        "desc": "A fast, focused page built for a single goal — sales, sign-ups, or contact. Perfect for Google Ads campaigns."
+      },
+      {
+        "id": "shop",
+        "title": "Online Shop",
+        "desc": "A ready-to-sell store with cart, payments and a product management panel."
+      },
+      {
+        "id": "wordpress",
+        "title": "WordPress Site",
+        "desc": "A modern site with an easy CMS you can manage yourself — no coding knowledge needed."
+      },
+      {
+        "id": "blog",
+        "title": "Blog",
+        "desc": "A platform for building authority and organic traffic. SEO-integrated from day one."
+      }
+    ],
+    "extraTitle": "I also handle",
+    "extras": [
+      "Domain registration & renewal",
+      "Hosting setup",
+      "Business email addresses",
+      "Google Ads campaigns",
+      "Traffic reports for clients",
+      "Technical support"
+    ]
+  },
+  "portfolio": {
+    "title": "Projects",
+    "sub": "Selected work for small and medium businesses.",
+    "items": [
+      {
+        "id": "wesele",
+        "name": "domweselnyagata.pl",
+        "cat": "Business card site",
+        "url": "https://domweselnyagata.pl"
+      },
+      {
+        "id": "pianos",
+        "name": "lewandowskipianos.pl",
+        "cat": "Company site",
+        "url": "https://lewandowskipianos.pl"
+      },
+      {
+        "id": "turbo",
+        "name": "turbofinder20.cermotor.com.pl",
+        "cat": "B2B Shop",
+        "url": "https://turbofinder20.cermotor.com.pl"
+      },
+      {
+        "id": "kwiaciarnia",
+        "name": "kwiaciarniawwildze.pl",
+        "cat": "Business card site",
+        "url": "https://kwiaciarniawwildze.pl"
+      }
+    ],
+    "visit": "Visit site →"
+  },
+  "process": {
+    "title": "How we work together",
+    "sub": "A simple process with full transparency at every stage.",
+    "steps": [
+      {
+        "num": "01",
+        "title": "Brief",
+        "desc": "We get to know your business, goal and audience. We define scope and timeline."
+      },
+      {
+        "num": "02",
+        "title": "Design",
+        "desc": "I create wireframes and the visual design. You approve the look before any coding begins."
+      },
+      {
+        "num": "03",
+        "title": "Launch",
+        "desc": "I build the site, configure domain, hosting and emails. Tested on every device."
+      },
+      {
+        "num": "04",
+        "title": "Support",
+        "desc": "I'm available after launch. Updates, ads, traffic reports and technical support."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Let's build something together",
+    "sub": "Have an idea for a website? Write to me and I'll respond within 24 hours.",
+    "cta": "Send a message",
+    "email": "midnajt0@gmail.com",
+    "location": "Warsaw · Remote work"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "tagline": "Building websites for your business."
+  },
+  "devs": {
+    "badge": "Web Developer",
+    "name": "Marcin Krzysztoszek",
+    "location": "Warsaw · Hybrid / Remote",
+    "about": "I build modern web applications for over 4 years. I bridge frontend and backend and create solutions with real business impact — from e-commerce shops to management systems. AI and productivity tooling enthusiast. I actively attend industry meetups and business events.",
+    "stackTitle": "Tech Stack",
+    "stack": {
+      "frontend": {
+        "label": "Frontend",
+        "items": ["React", "TypeScript", "Tailwind CSS", "Styled-components", "Next.js"]
+      },
+      "backend": {
+        "label": "Backend",
+        "items": ["Node.js", "Express", "PHP", "ASP.NET / C#"]
+      },
+      "db": {
+        "label": "Databases",
+        "items": ["MySQL", "SQL Server"]
+      },
+      "tools": {
+        "label": "Tools",
+        "items": ["Git", "PM2 / nginx", "WordPress", "Redux Toolkit"]
+      },
+      "workflow": {
+        "label": "Daily workflow",
+        "items": ["Cursor", "VS Code", "MySQL Workbench"]
+      }
+    },
+    "expTitle": "Experience",
+    "exp": [
+      {
+        "company": "Cer Motor Sp. z o.o.",
+        "period": "2021 – present (~5 years)",
+        "role": "Web Developer",
+        "bullets": [
+          "Designed and deployed TurboFinder — B2B shop for turbochargers (React, Node.js, Express, MySQL).",
+          "Built AgroFinder — agricultural parts shop with multi-path search and cascading filters.",
+          "Created Management Dashboard — real-time reporting of stock and inventory statistics.",
+          "Co-developed WMS — warehouse management and inventory system (C# / ASP.NET, SQL).",
+          "Delivered business card sites and landing pages for the sales department.",
+          "Maintained and developed legacy code (PHP, jQuery) in older company systems."
+        ]
+      },
+      {
+        "company": "Freelance",
+        "period": "2022 – present",
+        "role": "Web Developer / Freelancer",
+        "bullets": [
+          "Design and deployment of websites for local businesses — WordPress and hand-crafted solutions.",
+          "Direct client collaboration: requirements gathering, deployment, CMS training.",
+          "Full setup: domain registration, hosting configuration, business email addresses.",
+          "Running Google Ads campaigns and delivering traffic reports to clients."
+        ]
+      }
+    ],
+    "trainingTitle": "Events",
+    "training": [
+      {
+        "name": "10xDevs — AI-Native Software Engineering",
+        "url": "https://www.10xdevs.pl/",
+        "year": "December 2025",
+        "desc": "Practical AI workflow: agents, planning, production code refactoring."
+      },
+      {
+        "name": "Meetup: Cursor — BRAVE.courses",
+        "url": "https://www.linkedin.com/feed/update/urn:li:activity:7386451737357996032/",
+        "year": "November 2025",
+        "desc": "Meetup focused on effective use of Cursor in everyday developer work."
+      }
+    ],
+    "cvCta": "After reviewing my profile I'm happy to send my full CV.",
+    "cvBtn": "Send me an offer",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  }
+}

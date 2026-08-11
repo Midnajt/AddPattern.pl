@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #32D6D1;
+  --secondary: #3E8EFF;
+  --accent: #7B5CFF;
+  --accent-2: #D87AFB;
+  --background: #09090B;
+  --surface: #111217;
+  --card: #181A22;
+  --border: #2A2E39;
+  --text: #FFFFFF;
+  --text-secondary: #B9C1D9;
+  --text-muted: #8B93A7;
+  --brand-gradient: linear-gradient(135deg, #32D6D1 0%, #3E8EFF 35%, #7B5CFF 70%, #D87AFB 100%);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Sora', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: var(--brand-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .border-gradient {
+    border: 1px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+  }
+
+  .border-gradient::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--brand-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .glow {
+    box-shadow: 0 0 15px rgba(50, 214, 209, 0.35), 0 0 35px rgba(123, 92, 255, 0.25);
+  }
+
+  .glow-sm {
+    box-shadow: 0 0 8px rgba(50, 214, 209, 0.25);
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-8 lg:px-16 xl:px-24;
+  }
+}

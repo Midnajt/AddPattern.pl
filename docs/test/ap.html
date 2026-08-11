@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV — Marcin Krzysztoszek</title>
+  <style>
+    /* ── Fonts ── */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    /* ── Reset / Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:   #0f172a;
+      --teal:   #0d9488;
+      --teal-light: #ccfbf1;
+      --slate:  #334155;
+      --muted:  #64748b;
+      --border: #e2e8f0;
+      --bg:     #ffffff;
+      --font:   'Inter', system-ui, -apple-system, sans-serif;
+      --page-w: 210mm;
+      --page-h: 297mm;
+      --pad:    14mm;
+    }
+
+    body {
+      font-family: var(--font);
+      font-size: 9.5pt;
+      color: var(--navy);
+      background: #f1f5f9;
+      line-height: 1.5;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      width: var(--page-w);
+      min-height: var(--page-h);
+      background: var(--bg);
+      margin: 10mm auto;
+      padding: var(--pad);
+      box-shadow: 0 4px 24px rgba(0,0,0,.12);
+      position: relative;
+    }
+
+    /* ── Header ── */
+    .cv-header {
+      display: grid;
+      grid-template-columns: 28mm 1fr;
+      gap: 6mm;
+      align-items: center;
+      padding-bottom: 8mm;
+      border-bottom: 2px solid var(--teal);
+      margin-bottom: 7mm;
+    }
+
+    .cv-photo {
+      width: 28mm;
+      height: 28mm;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid var(--teal);
+      display: block;
+    }
+
+    .cv-name h1 {
+      font-size: 20pt;
+      font-weight: 700;
+      color: var(--navy);
+      letter-spacing: -.3px;
+      line-height: 1.1;
+    }
+
+    .cv-name .headline {
+      font-size: 11pt;
+      font-weight: 600;
+      color: var(--teal);
+      margin-top: 1.5mm;
+    }
+
+    .cv-name .location {
+      font-size: 8.5pt;
+      color: var(--muted);
+      margin-top: 1mm;
+    }
+
+    /* ── Contact bar ── */
+    .cv-contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3mm 6mm;
+      background: var(--navy);
+      color: #e2e8f0;
+      border-radius: 5px;
+      padding: 3.5mm 5mm;
+      font-size: 8.5pt;
+      margin-bottom: 7mm;
+    }
+
+    .cv-contact a {
+      color: var(--teal-light);
+      text-decoration: none;
+    }
+
+    .cv-contact .c-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+    }
+
+    .cv-contact .c-label {
+      color: var(--teal-light);
+      font-weight: 600;
+    }
+
+    /* ── Section ── */
+    section {
+      margin-bottom: 6mm;
+    }
+
+    .section-title {
+      font-size: 9pt;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      border-bottom: 1.5px solid var(--teal-light);
+      padding-bottom: 1.5mm;
+      margin-bottom: 4mm;
+    }
+
+    /* ── About ── */
+    .about-text {
+      color: var(--slate);
+      font-size: 9pt;
+      line-height: 1.6;
+    }
+
+    /* ── Experience entry ── */
+    .exp-entry {
+      margin-bottom: 5mm;
+    }
+
+    .exp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2mm;
+    }
+
+    .exp-company {
+      font-weight: 700;
+      font-size: 10pt;
+      color: var(--navy);
+    }
+
+    .exp-period {
+      font-size: 8pt;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .exp-role {
+      font-size: 9pt;
+      font-weight: 600;
+      color: var(--teal);
+      margin-top: .5mm;
+    }
+
+    .exp-groups {
+      margin-top: 2.5mm;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .exp-group-label {
+      font-size: 7.5pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      color: var(--muted);
+      margin-bottom: .5mm;
+    }
+
+    ul.bullets {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul.bullets li {
+      padding-left: 4mm;
+      position: relative;
+      color: var(--slate);
+      font-size: 8.8pt;
+      line-height: 1.55;
+      margin-bottom: .6mm;
+    }
+
+    ul.bullets li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--teal);
+      font-size: 8pt;
+      top: .5px;
+    }
+
+    /* ── Skills ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .skill-group h3 {
+      font-size: 8pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .7px;
+      color: var(--muted);
+      margin-bottom: 2mm;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5mm;
+    }
+
+    .tag {
+      background: var(--teal-light);
+      color: var(--teal);
+      font-size: 7.8pt;
+      font-weight: 600;
+      padding: .8mm 2.5mm;
+      border-radius: 3px;
+    }
+
+    .tag.secondary {
+      background: #f1f5f9;
+      color: var(--slate);
+    }
+
+    .tag.learning {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    /* ── Education / training rows ── */
+    .edu-entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 2mm;
+      margin-bottom: 2mm;
+    }
+
+    .edu-main {
+      font-weight: 600;
+      font-size: 9pt;
+      color: var(--navy);
+    }
+
+    .edu-sub {
+      font-size: 8.5pt;
+      color: var(--muted);
+    }
+
+    .edu-year {
+      font-size: 8pt;
+      color: var(--muted);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* ── Languages ── */
+    .lang-list {
+      display: flex;
+      gap: 6mm;
+    }
+
+    .lang-item {
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+
+    .lang-name {
+      font-weight: 600;
+      font-size: 9pt;
+    }
+
+    .lang-level {
+      font-size: 8pt;
+      color: var(--muted);
+    }
+
+    /* ── Interests ── */
+    .interest-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2mm;
+    }
+
+    .interest-chip {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      color: var(--slate);
+      font-size: 8pt;
+      padding: 1mm 3mm;
+      border-radius: 4px;
+    }
+
+    /* ── Page 2 separator ── */
+    .page-break {
+      break-after: page;
+      page-break-after: always;
+    }
+
+    /* ── Print ── */
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        background: white;
+        font-size: 9.2pt;
+      }
+
+      .page {
+        width: 210mm;
+        min-height: 297mm;
+        margin: 0;
+        padding: 12mm 14mm;
+        box-shadow: none;
+      }
+
+      .page-break {
+        break-after: page;
+        page-break-after: always;
+      }
+
+      .tag { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .cv-contact { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════ PAGE 1 -->
+<div class="page page-break">
+
+  <!-- HEADER -->
+  <header class="cv-header">
+    <img src="2.png" alt="Zdjęcie profilowe" class="cv-photo" />
+    <div class="cv-name">
+      <h1>Marcin Krzysztoszek</h1>
+      <div class="headline">Web Developer</div>
+      <div class="location">Warszawa &nbsp;·&nbsp; Hybryda / otwarty na inne formy</div>
+    </div>
+  </header>
+
+  <!-- CONTACT -->
+  <div class="cv-contact">
+    <div class="c-item"><span class="c-label">E-mail:</span> midnajt0@gmail.com</div>
+    <div class="c-item"><span class="c-label">Tel.:</span> [uzupełnij]</div>
+    <div class="c-item"><span class="c-label">LinkedIn:</span> <a href="https://www.linkedin.com/in/%E2%97%8F-marcin-krzysztoszek-a7851116b/">linkedin.com/in/marcin-krzysztoszek</a></div>
+    <div class="c-item"><span class="c-label">GitHub:</span> <a href="https://github.com/Midnajt">github.com/Midnajt</a></div>
+  </div>
+
+  <!-- O MNIE -->
+  <section>
+    <h2 class="section-title">O mnie</h2>
+    <p class="about-text">
+      Tworzenie nowoczesnych aplikacji webowych i wdrażanie nowych technologii to dla mnie nie tylko praca,
+      ale źródło satysfakcji i motywacja do ciągłego rozwoju. Od ponad 4 lat komensuję zwinne połączenie
+      frontendu i backendu z realnym wpływem na procesy biznesowe — od sklepów e-commerce,
+      przez systemy magazynowe, po automatyzację obiegu faktur.
+      Entuzjasta AI i narzędzi przyspieszających pracę (Cursor, Claude Code).
+      Stale poszerzam kompetencje w obszarze TypeScript i Next.js.
+      Cenię pracę hybrydową i efektywną współpracę z ludźmi, którzy mówią wprost.
+    </p>
+  </section>
+
+  <!-- DOŚWIADCZENIE -->
+  <section>
+    <h2 class="section-title">Doświadczenie</h2>
+
+    <div class="exp-entry">
+      <div class="exp-header">
+        <span class="exp-company">Cer Motor Sp. z o.o.</span>
+        <span class="exp-period">2021 – obecnie &nbsp;(~5 lat)</span>
+      </div>
+      <div class="exp-role">Web Developer / Junior IT Specialist</div>
+
+      <div class="exp-groups">
+
+        <div>
+          <div class="exp-group-label">E-commerce &amp; aplikacje webowe</div>
+          <ul class="bullets">
+            <li>Zaprojektowanie i wdrożenie <strong>TurboFinder</strong> — sklepu B2B z asortymentem turbosprężarek (React, Node.js, Express, MySQL).</li>
+            <li>Budowa <strong>AgroFinder</strong> — sklepu z częściami rolniczo-budowlanymi; wielościeżkowe wyszukiwanie (silnik, OEM, wymiary, chemia), filtry kaskadowe, stany magazynowe.</li>
+            <li>Realizacja stron wizytówkowych / landing pages dla działu sprzedaży.</li>
+            <li>Rozwijanie i utrzymanie legacy code (PHP, jQuery) w starszych systemach firmowych.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="exp-group-label">Systemy magazynowe (WMS)</div>
+          <ul class="bullets">
+            <li>Współtworzenie <strong>WMS</strong> — systemu zarządzania magazynem i inwentaryzacji (C# / ASP.NET / ASPX, SQL).</li>
+            <li>Budowa <strong>WMS_Filie</strong> — modułu odmagazynowań dla oddziałów terenowych (.NET / ASPX).</li>
+            <li>Stworzenie <strong>Dashboardu zarządu</strong> — raportowanie statystyk towarowych i stanów magazynowych w czasie rzeczywistym.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="exp-group-label">Automatyzacja procesów &amp; low-code</div>
+          <ul class="bullets">
+            <li>Wdrożenie rozwiązania low-code (Suncode / PlusWorkflow) do obsługi obiegu faktur i integracji z <strong>KSeF</strong>.</li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="exp-group-label">IT &amp; bezpieczeństwo</div>
+          <ul class="bullets">
+            <li>Organizacja szkoleń z cyberbezpieczeństwa na platformie <strong>KnowBe4</strong> oraz kampanii phishingowych podnoszących świadomość pracowników.</li>
+            <li>Zarządzanie licencjami Microsoft; konfiguracja i onboarding sprzętu dla nowych użytkowników.</li>
+            <li>Bieżące wsparcie działu IT: awarie w serwerowni, pomoc techniczna dla pracowników.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</div><!-- end page 1 -->
+
+<!-- ═══════════════════════════════════════════════════ PAGE 2 -->
+<div class="page">
+
+  <!-- UMIEJĘTNOŚCI -->
+  <section>
+    <h2 class="section-title">Umiejętności techniczne</h2>
+    <div class="skills-grid">
+
+      <div class="skill-group">
+        <h3>Frontend</h3>
+        <div class="tag-list">
+          <span class="tag">React</span>
+          <span class="tag">CSS / Styled-components</span>
+          <span class="tag secondary">Tailwind CSS</span>
+          <span class="tag secondary">Bootstrap</span>
+          <span class="tag learning">TypeScript</span>
+          <span class="tag learning">Next.js</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Backend</h3>
+        <div class="tag-list">
+          <span class="tag">Node.js</span>
+          <span class="tag">Express</span>
+          <span class="tag secondary">PHP</span>
+          <span class="tag secondary">ASP.NET / C#</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Bazy danych</h3>
+        <div class="tag-list">
+          <span class="tag">MySQL</span>
+          <span class="tag secondary">SQL Server</span>
+        </div>
+      </div>
+
+      <div class="skill-group">
+        <h3>Narzędzia &amp; inne</h3>
+        <div class="tag-list">
+          <span class="tag secondary">Git</span>
+          <span class="tag secondary">PM2 / nginx</span>
+          <span class="tag secondary">WordPress</span>
+          <span class="tag secondary">Redux Toolkit</span>
+          <span class="tag learning">AI Tooling (Cursor)</span>
+        </div>
+      </div>
+
+    </div>
+    <p style="margin-top:3mm; font-size:7.8pt; color:var(--muted);">
+      Legenda: &nbsp;
+      <span class="tag" style="font-size:7.4pt;">mocna</span>&nbsp;
+      <span class="tag secondary" style="font-size:7.4pt;">dobra znajomość</span>&nbsp;
+      <span class="tag learning" style="font-size:7.4pt;">w rozwoju</span>
+    </p>
+  </section>
+
+  <!-- WYKSZTAŁCENIE -->
+  <section>
+    <h2 class="section-title">Wykształcenie</h2>
+    <div class="edu-entry">
+      <div>
+        <div class="edu-main">Akademia Ekonomiczno-Humanistyczna w Warszawie</div>
+        <div class="edu-sub">Licencjat &nbsp;·&nbsp; Zarządzanie — projekty w branży IT</div>
+        <div class="edu-sub" style="margin-top:1mm;">Podczas zajęć z baz danych napisałem pierwszego SQL-a — i właśnie ten moment zapoczątkował moją pasję do programowania.</div>
+      </div>
+      <div class="edu-year">2020</div>
+    </div>
+  </section>
+
+  <!-- SZKOLENIA -->
+  <section>
+    <h2 class="section-title">Szkolenia &amp; certyfikaty</h2>
+    <div class="edu-entry">
+      <div>
+        <div class="edu-main">10xDevs — AI-Native Software Engineering</div>
+        <div class="edu-sub">
+          <a href="https://www.10xdevs.pl/" style="color:var(--teal); text-decoration:none;">10xdevs.pl</a>
+          &nbsp;·&nbsp; Praktyczny workflow pracy z AI: agenci, planowanie, refaktoring produkcyjnego kodu, 10x-cli
+        </div>
+      </div>
+      <div class="edu-year">Grudzień 2025</div>
+    </div>
+  </section>
+
+  <!-- PROJEKTY WŁASNE -->
+  <section>
+    <h2 class="section-title">Projekty dodatkowe</h2>
+    <ul class="bullets">
+      <li>Realizacja komercyjnych stron internetowych dla małych przedsiębiorców — WordPress oraz hand-crafted HTML/CSS/JS.</li>
+      <li>Współpraca bezpośrednio z klientami: zbieranie wymagań, wdrożenie, szkolenie ze strony CMS.</li>
+    </ul>
+  </section>
+
+  <!-- JĘZYKI -->
+  <section>
+    <h2 class="section-title">Języki</h2>
+    <div class="lang-list">
+      <div class="lang-item">
+        <span class="lang-name">Polski</span>
+        <span class="lang-level">— ojczysty</span>
+      </div>
+      <div class="lang-item">
+        <span class="lang-name">Angielski</span>
+        <span class="lang-level">— komunikatywny (praca z dokumentacją techniczną, AI)</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZAINTERESOWANIA -->
+  <section>
+    <h2 class="section-title">Zainteresowania</h2>
+    <div class="interest-list">
+      <span class="interest-chip">Warhammer 40k</span>
+      <span class="interest-chip">Formuła 1</span>
+      <span class="interest-chip">Dart</span>
+      <span class="interest-chip">Wypady w teren / las</span>
+    </div>
+  </section>
+
+  <!-- KLAUZULA -->
+  <p style="margin-top:auto; padding-top:6mm; font-size:7.2pt; color:#94a3b8; border-top:1px solid var(--border);">
+    Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb rekrutacji, zgodnie z art. 6 ust. 1 lit. a RODO
+    (Dz.U. 2018 poz. 1000).
+  </p>
+
+</div><!-- end page 2 -->
+
+</body>
+</html>

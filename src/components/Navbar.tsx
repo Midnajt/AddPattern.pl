@@ -31,6 +31,13 @@ export default function Navbar() {
     setMobileOpen(false)
   }
 
+  function goHome() {
+    setMobileOpen(false)
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
   function goToForDevs() {
     setMobileOpen(false)
     if (location.pathname === '/dla-devow') {
@@ -52,7 +59,7 @@ export default function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center group">
+          <Link to="/" onClick={goHome} className="flex items-center group" aria-label="AddPattern — strona główna">
             <img
               src={asset('logo_icon.png')}
               alt="AddPattern"

@@ -31,9 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build
-        env:
-          GITHUB_PAGES: 'true'
+        run: npm run build:pages
 
       - name: Keep GitHub Pages from running Jekyll
         run: touch dist/.nojekyll

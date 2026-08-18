@@ -74,7 +74,7 @@ Ten sam kod idzie w dwa miejsca — **różne buildy**, bo inna jest ścieżka a
 | **Produkcja (OVH / FTP)** | lokalnie `npm run build` → wgraj `dist/` | [https://addpattern.pl](https://addpattern.pl) |
 | **Podgląd (GitHub Pages)** | `git push` na `main` | [https://Midnajt.github.io/AddPattern.github.io/](https://Midnajt.github.io/AddPattern.github.io/) |
 
-`vite.config.ts` ustawia `base: '/'` przy zwykłym buildzie i `base: '/AddPattern.github.io/'` tylko w GitHub Actions (`GITHUB_PAGES=true`).
+Lokalnie `npm run build` zostawia `base: '/'`. GitHub Actions woła `npm run build:pages`, które nadpisuje ścieżkę na `/AddPattern.github.io/`.
 
 ### OVHcloud / FTP (`addpattern.pl`)
 

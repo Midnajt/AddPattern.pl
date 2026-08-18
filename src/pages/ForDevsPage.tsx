@@ -134,7 +134,7 @@ export default function ForDevsPage() {
               {/* Contact links */}
               <motion.div variants={fadeUp} className="flex flex-wrap gap-3 mt-4">
                 <a
-                  href="mailto:midnajt0@gmail.com"
+                  href={`mailto:${t('contact.email')}`}
                   className="flex items-center gap-2 px-4 py-2 rounded-full border border-surface-border bg-surface text-sm font-body text-text-secondary hover:border-brand-primary/50 hover:text-white transition-colors duration-200"
                 >
                   ✉ {t('devs.email')}
@@ -332,7 +332,7 @@ export default function ForDevsPage() {
                 {t('devs.cvCta')}
               </p>
               <motion.a
-                href="mailto:midnajt0@gmail.com"
+                href={`mailto:${t('contact.email')}`}
                 whileHover={{
                   scale: 1.04,
                   boxShadow: '0 0 20px rgba(50,214,209,.35), 0 0 40px rgba(123,92,255,.25)',

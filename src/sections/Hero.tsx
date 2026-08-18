@@ -111,7 +111,7 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center gap-4"
         >
           <motion.a
-            href="mailto:midnajt0@gmail.com"
+            href={`mailto:${t('contact.email')}`}
             whileHover={{ scale: 1.04, boxShadow: '0 0 20px rgba(50,214,209,.4), 0 0 40px rgba(123,92,255,.3)' }}
             whileTap={{ scale: 0.97 }}
             className="px-8 py-4 rounded-2xl font-display font-bold text-base text-surface-bg bg-brand-gradient shadow-glow transition-all duration-200"

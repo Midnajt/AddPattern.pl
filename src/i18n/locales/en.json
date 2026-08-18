@@ -15,41 +15,46 @@
   },
   "offer": {
     "title": "What I can do for you",
-    "sub": "Full online presence — from the first idea to a live website.",
+    "sub": "From the first idea to a live website — I guide you step by step, in plain language.",
     "items": [
       {
+        "id": "wizytowka",
+        "title": "Business card website",
+        "desc": "A simple site for your company online: who you are, what you do, and how to reach you. Perfect when you just need to be findable on the internet."
+      },
+      {
         "id": "landing",
-        "title": "Landing Page",
-        "desc": "A fast, focused page built for a single goal — sales, sign-ups, or contact. Perfect for Google Ads campaigns."
+        "title": "Landing page",
+        "desc": "One short page built for a single result — a phone call, a sign-up, or a sale. Works especially well with Google ads."
       },
       {
         "id": "shop",
-        "title": "Online Shop",
-        "desc": "A ready-to-sell store with cart, payments and a product management panel."
+        "title": "Online shop",
+        "desc": "A place where customers browse products, add them to a cart, and pay online. You get a panel to add and edit offers yourself."
       },
       {
         "id": "wordpress",
-        "title": "WordPress Site",
-        "desc": "A modern site with an easy CMS you can manage yourself — no coding knowledge needed."
+        "title": "WordPress website",
+        "desc": "WordPress is a popular way to run a website so you can change texts and photos yourself — without coding. I build it so it’s easy for you to manage later."
       },
       {
         "id": "blog",
         "title": "Blog",
-        "desc": "A platform for building authority and organic traffic. SEO-integrated from day one."
+        "desc": "A place for articles and tips about your industry. It builds trust and helps customers find you more easily in Google."
       },
       {
         "id": "support",
         "title": "Consulting & technical support",
-        "desc": "I’ll help you choose the right online solutions in plain language. I look after your site day to day — fixes, updates, small outages, and answers when something doesn’t work."
+        "desc": "I’ll help you choose sensible solutions and explain them in simple terms. After launch I can handle fixes, updates, and step in when something doesn’t work."
       }
     ],
     "extraTitle": "I also handle",
     "extras": [
-      "Domain registration & renewal",
-      "Hosting setup",
+      "Domain registration & renewal (your web address, e.g. yourcompany.com)",
+      "Hosting — the place on the internet where your site is stored",
       "Business email addresses",
       "Google Ads campaigns",
-      "Traffic reports for clients"
+      "Simple reports: who visits your website"
     ]
   },
   "portfolio": {

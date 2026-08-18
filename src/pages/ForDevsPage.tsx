@@ -57,6 +57,17 @@ export default function ForDevsPage() {
           name="description"
           content="Web Developer z 4+ latami doświadczenia — React, TypeScript, Node.js. Rekrutacja i networking."
         />
+        <link rel="canonical" href="https://addpattern.pl/#/dla-devow" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://addpattern.pl/#/dla-devow" />
+        <meta property="og:title" content="Marcin Krzysztoszek — Web Developer | AddPattern" />
+        <meta
+          property="og:description"
+          content="Web Developer z 4+ latami doświadczenia — React, TypeScript, Node.js. Rekrutacja i networking."
+        />
+        <meta property="og:image" content="https://addpattern.pl/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://addpattern.pl/og-image.png" />
       </Helmet>
 
       {/* Hero top with bg image */}

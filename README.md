@@ -3,13 +3,14 @@
 > Strona portfolio i ofertowa firmy **AddPattern · Marcin Krzysztoszek**  
 > Tworzę nowoczesne strony internetowe dla małych i średnich firm — od projektu po domenę, hosting, reklamy i analitykę.
 
-🔗 **Live:** *(zostanie uzupełnione po publikacji)*
+🔗 **Live:** [https://addpattern.pl](https://addpattern.pl)  
+☁️ **Hosting:** OVHcloud (domena + hosting, katalog `www`)
 
 ---
 
 ## O projekcie
 
-Dwujęzyczna (PL/EN) strona wizytówkowa skierowana do klientów biznesowych oraz rekruterów/partnerów technicznych. Zbudowana jako SPA z routingiem po stronie klienta i deployem na GitHub Pages.
+Dwujęzyczna (PL/EN) strona wizytówkowa skierowana do klientów biznesowych oraz rekruterów/partnerów technicznych. Zbudowana jako SPA z routingiem po stronie klienta. Produkcyjnie hostowana na **OVHcloud** pod adresem **[addpattern.pl](https://addpattern.pl)**.
 
 ### Strony
 
@@ -40,7 +41,7 @@ Dwujęzyczna (PL/EN) strona wizytówkowa skierowana do klientów biznesowych ora
 | [React Router v6](https://reactrouter.com/) | routing (HashRouter) |
 | [react-i18next](https://react.i18next.com/) | internacjonalizacja PL / EN |
 | [react-helmet-async](https://github.com/staylor/react-helmet-async) | SEO meta tags |
-| [GitHub Actions](https://docs.github.com/en/actions) | CI/CD → GitHub Pages |
+| OVHcloud | hosting produkcyjny + domena `addpattern.pl` |
 
 ---
 
@@ -64,17 +65,19 @@ npm run preview   # lokalne podejrzenie buildu
 
 ---
 
-## Deploy — GitHub Pages
+## Deploy — OVHcloud (`addpattern.pl`)
 
-Szczegółowa instrukcja krok po kroku znajduje się w [`.cursor/report/todo-github-pages.md`](.cursor/report/todo-github-pages.md).
+Strona produkcyjna: **[https://addpattern.pl](https://addpattern.pl)**  
+Hosting: **OVHcloud** — pliki statyczne z buildu w katalogu **`www`**.
 
-**Skrót:**
+**Skrót (FTP):**
 
-1. Utwórz repo na GitHub (Public)
-2. Ustaw `base` w `vite.config.ts` (`'/'` lub `'/nazwa-repo/'`)
-3. Wypchnij kod na branch `main`
-4. W Settings → Pages → Source → **GitHub Actions**
-5. Każdy kolejny `git push` deploye automatycznie
+1. W `vite.config.ts` ustaw `base: '/'` (już skonfigurowane pod domenę)
+2. Zbuduj projekt: `npm run build` (do `dist/` trafia też `.htaccess` — wymusza HTTPS)
+3. Wgraj **zawartość** folderu `dist/` przez FTP do katalogu `www` na hostingu OVH
+4. Sprawdź stronę pod [https://addpattern.pl](https://addpattern.pl)
+
+Starsza instrukcja pod GitHub Pages (opcjonalnie / archiwum): [`.cursor/report/todo-github-pages.md`](.cursor/report/todo-github-pages.md).
 
 ---
 

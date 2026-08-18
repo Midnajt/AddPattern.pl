@@ -18,6 +18,7 @@ const item = {
 }
 
 const ICONS: Record<string, string> = {
+  wizytowka: '🏠',
   landing: '⚡',
   shop: '🛒',
   wordpress: '🧩',

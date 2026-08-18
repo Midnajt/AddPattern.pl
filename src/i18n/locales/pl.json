@@ -15,41 +15,46 @@
   },
   "offer": {
     "title": "Co mogę dla Ciebie zrobić",
-    "sub": "Kompleksowa obsługa online — od pierwszego pomysłu do gotowej strony.",
+    "sub": "Od pomysłu do gotowej strony w internecie — prowadzę Cię krok po kroku, bez żargonu.",
     "items": [
       {
+        "id": "wizytowka",
+        "title": "Strona wizytówkowa",
+        "desc": "Prosta strona Twojej firmy w internecie: kim jesteś, czym się zajmujesz, jak się z Tobą skontaktować. Idealna na start, gdy chcesz być widoczny online."
+      },
+      {
         "id": "landing",
-        "title": "Landing Page",
-        "desc": "Szybka, skuteczna strona nastawiona na jeden cel — sprzedaż, zapis lub kontakt. Idealna dla reklam Google i kampanii."
+        "title": "Landing page",
+        "desc": "Jedna, krótka strona nastawiona na konkretny efekt — np. telefon, zapis na listę albo sprzedaż. Dobrze działa z reklamami w Google."
       },
       {
         "id": "shop",
         "title": "Sklep internetowy",
-        "desc": "Gotowy do sprzedaży sklep z koszykiem, płatnościami i panelem zarządzania produktami."
+        "desc": "Miejsce, w którym klienci oglądają produkty, wrzucają je do koszyka i płacą online. Dostajesz panel, w którym sam dodajesz i edytujesz oferty."
       },
       {
         "id": "wordpress",
         "title": "Strona WordPress",
-        "desc": "Nowoczesna strona z prostym CMS, którym możesz zarządzać samodzielnie bez znajomości programowania."
+        "desc": "WordPress to popularny sposób na prowadzenie strony, dzięki któremu możesz sam zmieniać teksty i zdjęcia — bez programowania. Buduję stronę tak, byś potem łatwo nią zarządzał."
       },
       {
         "id": "blog",
         "title": "Blog",
-        "desc": "Platforma do budowania autorytetu i ruchu organicznego. Integracja z SEO od samego początku."
+        "desc": "Miejsce na artykuły i porady związane z Twoją branżą. Pomaga budować zaufanie i sprawia, że klienci łatwiej znajdują Cię w Google."
       },
       {
         "id": "support",
         "title": "Doradztwo i obsługa techniczna",
-        "desc": "Pomogę wybrać dobre rozwiązania online bez zbędnego żargonu. Opiekuję się stroną na co dzień — poprawki, aktualizacje, drobne awarie i pytania, gdy coś nie działa."
+        "desc": "Pomogę wybrać sensowne rozwiązania i wyjaśnię je prostym językiem. Po starcie strony mogę czuwać nad poprawkami, aktualizacjami i reagować, gdy coś nie działa."
       }
     ],
     "extraTitle": "Dodatkowo zajmuję się",
     "extras": [
-      "Rejestracja i utrzymanie domeny",
-      "Konfiguracja hostingu",
+      "Rejestracja i utrzymanie domeny (adresu strony, np. twojafirma.pl)",
+      "Hosting — miejsce w internecie, gdzie strona jest przechowywana",
       "Firmowe adresy e-mail",
       "Reklamy Google Ads",
-      "Raporty ruchu dla klienta"
+      "Proste raporty: kto odwiedza Twoją stronę"
     ]
   },
   "portfolio": {

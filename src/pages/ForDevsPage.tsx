@@ -65,9 +65,9 @@ export default function ForDevsPage() {
           property="og:description"
           content="Web Developer z 4+ latami doświadczenia — React, TypeScript, Node.js. Rekrutacja i networking."
         />
-        <meta property="og:image" content="https://addpattern.pl/og-image.png" />
+        <meta property="og:image" content="https://addpattern.pl/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://addpattern.pl/og-image.png" />
+        <meta name="twitter:image" content="https://addpattern.pl/og-image.jpg" />
       </Helmet>
 
       {/* Hero top with bg image */}

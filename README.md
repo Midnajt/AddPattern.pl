@@ -65,19 +65,40 @@ npm run preview   # lokalne podejrzenie buildu
 
 ---
 
-## Deploy — OVHcloud (`addpattern.pl`)
+## Deploy
 
-Strona produkcyjna: **[https://addpattern.pl](https://addpattern.pl)**  
-Hosting: **OVHcloud** — pliki statyczne z buildu w katalogu **`www`**.
+Ten sam kod idzie w dwa miejsca — **różne buildy**, bo inna jest ścieżka assetów.
 
-**Skrót (FTP):**
+| Gdzie | Jak | Adres |
+|---|---|---|
+| **Produkcja (OVH / FTP)** | lokalnie `npm run build` → wgraj `dist/` | [https://addpattern.pl](https://addpattern.pl) |
+| **Podgląd (GitHub Pages)** | `git push` na `main` | [https://Midnajt.github.io/AddPattern.github.io/](https://Midnajt.github.io/AddPattern.github.io/) |
 
-1. W `vite.config.ts` ustaw `base: '/'` (już skonfigurowane pod domenę)
-2. Zbuduj projekt: `npm run build` (do `dist/` trafia też `.htaccess` — wymusza HTTPS)
-3. Wgraj **zawartość** folderu `dist/` przez FTP do katalogu `www` na hostingu OVH
-4. Sprawdź stronę pod [https://addpattern.pl](https://addpattern.pl)
+`vite.config.ts` ustawia `base: '/'` przy zwykłym buildzie i `base: '/AddPattern.github.io/'` tylko w GitHub Actions (`GITHUB_PAGES=true`).
 
-Starsza instrukcja pod GitHub Pages (opcjonalnie / archiwum): [`.cursor/report/todo-github-pages.md`](.cursor/report/todo-github-pages.md).
+### OVHcloud / FTP (`addpattern.pl`)
+
+1. Zbuduj projekt: `npm run build` (do `dist/` trafia też `.htaccess` — wymusza HTTPS)
+2. Wgraj **zawartość** folderu `dist/` przez FTP do katalogu `www` na hostingu OVH
+3. Sprawdź stronę pod [https://addpattern.pl](https://addpattern.pl)
+
+Nie wrzucaj na FTP buildu z GitHub Actions — ten ma inne ścieżki plików.
+
+### GitHub Pages (`git push`)
+
+Każdy push na `main` uruchamia [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+**Jednorazowo** w repo na GitHubie: **Settings → Pages → Build and deployment → Source → GitHub Actions**.
+
+Potem wystarczy:
+
+```bash
+git add .
+git commit -m "opis zmiany"
+git push
+```
+
+Po 1–3 minutach strona jest pod [https://Midnajt.github.io/AddPattern.github.io/](https://Midnajt.github.io/AddPattern.github.io/).
 
 ---
 

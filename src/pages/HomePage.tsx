@@ -27,16 +27,16 @@ export default function HomePage() {
           property="og:description"
           content="Od projektu po domenę, hosting i reklamy — prowadzę Twój biznes online na każdym kroku."
         />
-        <meta property="og:image" content="https://addpattern.pl/og-image.png" />
-        <meta property="og:image:width" content="1536" />
-        <meta property="og:image:height" content="1024" />
+        <meta property="og:image" content="https://addpattern.pl/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="AddPattern — Strony internetowe dla biznesu" />
         <meta
           name="twitter:description"
           content="Od projektu po domenę, hosting i reklamy — prowadzę Twój biznes online na każdym kroku."
         />
-        <meta name="twitter:image" content="https://addpattern.pl/og-image.png" />
+        <meta name="twitter:image" content="https://addpattern.pl/og-image.jpg" />
         <html lang={t('nav.offer') === 'Services' ? 'en' : 'pl'} />
       </Helmet>
 

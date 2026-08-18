@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import HomePage from './pages/HomePage'
 import ForDevsPage from './pages/ForDevsPage'
 import CookiesPage from './pages/CookiesPage'
+import CookieBanner from './components/CookieBanner'
+import AnalyticsTracker from './components/AnalyticsTracker'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -27,6 +29,8 @@ export default function App() {
         <Route path="/polityka-cookies" element={<CookiesPage />} />
       </Routes>
       <Footer />
+      <CookieBanner />
+      <AnalyticsTracker />
     </div>
   )
 }

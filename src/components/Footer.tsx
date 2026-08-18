@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { asset } from '../lib/assets'
+import { isAnalyticsConfigured, openCookieSettings } from '../lib/analytics'
 
 export default function Footer() {
   const { t } = useTranslation()
@@ -36,6 +37,15 @@ export default function Footer() {
           >
             {t('footer.cookies')}
           </Link>
+          {isAnalyticsConfigured() && (
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="hover:text-brand-primary transition-colors"
+            >
+              {t('footer.cookieSettings')}
+            </button>
+          )}
           <span>© {year} AddPattern. {t('footer.rights')}</span>
         </div>
       </div>

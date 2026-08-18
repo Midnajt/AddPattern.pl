@@ -124,13 +124,21 @@
   "footer": {
     "rights": "Wszelkie prawa zastrzeżone.",
     "tagline": "Tworzę strony dla Twojego biznesu.",
-    "cookies": "Polityka cookies"
+    "cookies": "Polityka cookies",
+    "cookieSettings": "Ustawienia cookies"
+  },
+  "cookieBanner": {
+    "title": "Cookies i analityka",
+    "text": "Używamy Google Analytics (GA4), żeby zobaczyć, jak korzystasz ze strony. Statystyki włączamy dopiero po Twojej zgodzie.",
+    "accept": "Akceptuję",
+    "reject": "Tylko niezbędne",
+    "more": "Więcej w polityce cookies."
   },
   "cookies": {
     "metaTitle": "Polityka cookies | AddPattern",
     "metaDesc": "Informacje o plikach cookies i podobnych technologiach używanych na stronie AddPattern.",
     "title": "Polityka cookies",
-    "updated": "Ostatnia aktualizacja: 11 sierpnia 2026 r.",
+    "updated": "Ostatnia aktualizacja: 18 sierpnia 2026 r.",
     "intro": "Niniejsza Polityka cookies wyjaśnia, w jaki sposób strona AddPattern (dalej: „Serwis”) wykorzystuje pliki cookies oraz podobne technologie (np. localStorage). Polityka ma charakter informacyjny i dotyczy Serwisu prowadzonego przez AddPattern Marcin Krzysztoszek (NIP: 8262179582).",
     "sections": [
       {
@@ -152,17 +160,18 @@
         "title": "3. Podstawa prawna",
         "paragraphs": [
           "Korzystanie z niezbędnych technologii służących prawidłowej pracy Serwisu opiera się na prawnie uzasadnionym interesie administratora (art. 6 ust. 1 lit. f RODO) oraz przepisach dotyczących świadczenia usług drogą elektroniczną.",
-          "Jeżeli w przyszłości Serwis będzie wykorzystywał cookies analityczne, marketingowe lub inne niewymagane do działania strony, ich użycie nastąpi po uzyskaniu zgody użytkownika (o ile będzie to wymagane), którą będzie można w każdej chwili wycofać."
+          "Cookies analityczne (Google Analytics 4) są używane wyłącznie po uzyskaniu zgody użytkownika (art. 6 ust. 1 lit. a RODO). Zgodę można w każdej chwili wycofać w stopce Serwisu („Ustawienia cookies”) lub przez odrzucenie cookies w banerze."
         ]
       },
       {
         "title": "4. Jakie technologie wykorzystujemy obecnie",
         "paragraphs": [
-          "Obecnie Serwis nie korzysta z narzędzi analitycznych ani reklamowych opartych o cookies stron trzecich (np. Google Analytics, Meta Pixel).",
           "Wykorzystujemy następujące mechanizmy:"
         ],
         "list": [
           "Preferencja języka (localStorage) — zapamiętanie wybranego języka interfejsu (PL/EN) przez bibliotekę i18next, aby przy kolejnej wizycie Serwis wyświetlał się w preferowanym języku.",
+          "Zgoda na cookies (localStorage) — zapis wyboru „akceptuję” / „tylko niezbędne”, żeby nie pytać przy każdej wizycie.",
+          "Google Analytics 4 — po wyrażeniu zgody ładujemy skrypt Google (gtag.js) i cookies analityczne (_ga, _ga_*), aby mierzyć liczbę odwiedzin, źródła ruchu i korzystanie z podstron. Narzędzie nie jest używane do reklam. Google LLC może przetwarzać dane zgodnie z własną polityką prywatności.",
           "Dane techniczne przeglądarki — w trakcie korzystania ze strony przeglądarka może automatycznie przetwarzać dane niezbędne do połączenia (np. adres IP, typ przeglądarki, system operacyjny). Są to standardowe logi wynikające z działania sieci i hostingu, a nie celowe profilowanie marketingowe po stronie Serwisu.",
           "Czcionki Google Fonts — Serwis ładuje fonty z serwerów Google (fonts.googleapis.com / fonts.gstatic.com). Dostawca może przetwarzać dane techniczne połączenia zgodnie z własną polityką prywatności Google."
         ]
@@ -175,6 +184,8 @@
         "list": [
           "zapewnienia prawidłowego działania i wyświetlania Serwisu,",
           "zapamiętania preferencji językowych użytkownika,",
+          "zapamiętania wyboru zgody na cookies,",
+          "analizy ruchu na stronie (Google Analytics 4) — wyłącznie po zgodzie,",
           "utrzymania bezpieczeństwa i stabilności połączenia,",
           "realizacji zapytań użytkowników (np. kontakt e-mail — poza mechanizmem cookies)."
         ]
@@ -183,6 +194,8 @@
         "title": "6. Okres przechowywania",
         "paragraphs": [
           "Preferencja języka przechowywana w localStorage pozostaje do czasu jej usunięcia przez użytkownika (wyczyszczenie danych strony w przeglądarce) lub zmiany języka w Serwisie.",
+          "Wybór zgody na cookies (localStorage) pozostaje do czasu jego zmiany w Serwisie lub usunięcia danych strony.",
+          "Cookies Google Analytics (_ga, _ga_*) są przechowywane zwykle do 24 miesięcy, zgodnie z ustawieniami Google Analytics.",
           "Dane techniczne po stronie dostawcy hostingu / infrastruktury mogą być przechowywane przez okres wynikający z logów serwerowych i polityki tego dostawcy."
         ]
       },
@@ -193,7 +206,7 @@
         ],
         "list": [
           "dostawcę hostingu / publikacji strony (np. GitHub Pages),",
-          "Google (w zakresie ładowania fontów Google Fonts),",
+          "Google LLC — Google Fonts oraz, po wyrażeniu zgody, Google Analytics 4,",
           "dostawcę poczty e-mail — wyłącznie gdy użytkownik sam nawiąże kontakt mailowy."
         ]
       },
@@ -216,7 +229,7 @@
           "Urządzenia mobilne — ustawienia przeglądarki lub systemu w sekcji prywatności"
         ],
         "paragraphsAfter": [
-          "Ograniczenie niezbędnych technologii może wpłynąć na działanie niektórych funkcji Serwisu (np. zapamiętanie wybranego języka)."
+          "Zgodę na analitykę można zmienić w stopce Serwisu („Ustawienia cookies”). Ograniczenie niezbędnych technologii może wpłynąć na działanie niektórych funkcji Serwisu (np. zapamiętanie wybranego języka)."
         ]
       },
       {

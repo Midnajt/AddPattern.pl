@@ -171,7 +171,7 @@
         "list": [
           "Preferencja języka (localStorage) — zapamiętanie wybranego języka interfejsu (PL/EN) przez bibliotekę i18next, aby przy kolejnej wizycie Serwis wyświetlał się w preferowanym języku.",
           "Zgoda na cookies (localStorage) — zapis wyboru „akceptuję” / „tylko niezbędne”, żeby nie pytać przy każdej wizycie.",
-          "Google Analytics 4 — po wyrażeniu zgody ładujemy skrypt Google (gtag.js) i cookies analityczne (_ga, _ga_*), aby mierzyć liczbę odwiedzin, źródła ruchu i korzystanie z podstron. Narzędzie nie jest używane do reklam. Google LLC może przetwarzać dane zgodnie z własną polityką prywatności.",
+          "Google Analytics 4 — w kodzie strony znajduje się tag Google (gtag.js) z trybem zgody: cookies analityczne (_ga, _ga_*) i pomiar odwiedzin włączamy dopiero po Twojej zgodzie. Narzędzie nie jest używane do reklam. Google LLC może przetwarzać dane zgodnie z własną polityką prywatności.",
           "Dane techniczne przeglądarki — w trakcie korzystania ze strony przeglądarka może automatycznie przetwarzać dane niezbędne do połączenia (np. adres IP, typ przeglądarki, system operacyjny). Są to standardowe logi wynikające z działania sieci i hostingu, a nie celowe profilowanie marketingowe po stronie Serwisu.",
           "Czcionki Google Fonts — Serwis ładuje fonty z serwerów Google (fonts.googleapis.com / fonts.gstatic.com). Dostawca może przetwarzać dane techniczne połączenia zgodnie z własną polityką prywatności Google."
         ]

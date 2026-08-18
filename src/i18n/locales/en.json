@@ -171,7 +171,7 @@
         "list": [
           "Language preference (localStorage) — remembering the selected interface language (PL/EN) via i18next so the Site can show your preferred language on the next visit.",
           "Cookie consent (localStorage) — storing your “accept” / “essential only” choice so we do not ask on every visit.",
-          "Google Analytics 4 — after you give consent we load Google’s script (gtag.js) and analytics cookies (_ga, _ga_*) to measure visits, traffic sources, and use of subpages. The tool is not used for ads. Google LLC may process data under its own privacy policy.",
+          "Google Analytics 4 — the Site includes the Google tag (gtag.js) with consent mode: analytics cookies (_ga, _ga_*) and visit measurement are enabled only after you give consent. The tool is not used for ads. Google LLC may process data under its own privacy policy.",
           "Browser technical data — while you use the Site, the browser may process data needed for the connection (e.g. IP address, browser type, operating system). These are standard network/hosting logs, not marketing profiling by the Site.",
           "Google Fonts — the Site loads fonts from Google servers (fonts.googleapis.com / fonts.gstatic.com). The provider may process technical connection data under Google’s own privacy policy."
         ]

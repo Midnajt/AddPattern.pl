@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npm run build:pages
+        run: npx tsc -b && npx vite build --base "/${{ github.event.repository.name }}/" && node scripts/copy-htaccess.mjs
 
       - name: Keep GitHub Pages from running Jekyll
         run: touch dist/.nojekyll

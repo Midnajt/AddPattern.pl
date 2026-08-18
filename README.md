@@ -72,9 +72,9 @@ Ten sam kod idzie w dwa miejsca — **różne buildy**, bo inna jest ścieżka a
 | Gdzie | Jak | Adres |
 |---|---|---|
 | **Produkcja (OVH / FTP)** | lokalnie `npm run build` → wgraj `dist/` | [https://addpattern.pl](https://addpattern.pl) |
-| **Podgląd (GitHub Pages)** | `git push` na `main` | [https://Midnajt.github.io/AddPattern.github.io/](https://Midnajt.github.io/AddPattern.github.io/) |
+| **Podgląd (GitHub Pages)** | `git push` na `main` | [https://midnajt.github.io/AddPattern.pl/](https://midnajt.github.io/AddPattern.pl/) |
 
-Lokalnie `npm run build` zostawia `base: '/'`. GitHub Actions woła `npm run build:pages`, które nadpisuje ścieżkę na `/AddPattern.github.io/`.
+Lokalnie `npm run build` zostawia `base: '/'`. GitHub Actions buduje z `--base /<nazwa-repo>/`, obecnie `/AddPattern.pl/`.
 
 ### OVHcloud / FTP (`addpattern.pl`)
 
@@ -98,7 +98,7 @@ git commit -m "opis zmiany"
 git push
 ```
 
-Po 1–3 minutach strona jest pod [https://Midnajt.github.io/AddPattern.github.io/](https://Midnajt.github.io/AddPattern.github.io/).
+Po 1–3 minutach strona jest pod [https://midnajt.github.io/AddPattern.pl/](https://midnajt.github.io/AddPattern.pl/).
 
 ---
 

@@ -140,7 +140,7 @@ export default function ForDevsPage() {
                   ✉ {t('devs.email')}
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/%E2%97%8F-marcin-krzysztoszek-a7851116b/"
+                  href="https://www.linkedin.com/in/marcin-krzysztoszek"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2 rounded-full border border-surface-border bg-surface text-sm font-body text-text-secondary hover:border-brand-secondary/50 hover:text-white transition-colors duration-200"

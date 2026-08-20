@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/logo_icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tworzę strony internetowe dla firm — wizytówki, landing page, sklepy, WordPress, blogi. Domena, hosting, reklamy i wsparcie — AddPattern."
+    />
+
+    <!-- Open Graph (Messenger, Facebook, LinkedIn…) — must be in static HTML for crawlers -->
+    <meta property="og:site_name" content="AddPattern" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="pl_PL" />
+    <meta property="og:url" content="https://addpattern.pl/" />
+    <meta property="og:title" content="AddPattern — Strony internetowe dla biznesu" />
+    <meta
+      property="og:description"
+      content="Od projektu po domenę, hosting i reklamy — prowadzę Twój biznes online na każdym kroku."
+    />
+    <meta property="og:image" content="https://addpattern.pl/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="AddPattern — Strony internetowe dla biznesu" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AddPattern — Strony internetowe dla biznesu" />
+    <meta
+      name="twitter:description"
+      content="Od projektu po domenę, hosting i reklamy — prowadzę Twój biznes online na każdym kroku."
+    />
+    <meta name="twitter:image" content="https://addpattern.pl/og-image.jpg" />
+
+    <link rel="canonical" href="https://addpattern.pl/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>AddPattern — Strony internetowe dla biznesu</title>
+
+    <!-- Google tag (gtag.js) — cookies analityczne dopiero po zgodzie (Consent Mode) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X8PYS8QPEQ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || []
+      function gtag() {
+        dataLayer.push(arguments)
+      }
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500,
+      })
+      try {
+        if (localStorage.getItem('ap_cookie_consent') === 'accepted') {
+          gtag('consent', 'update', { analytics_storage: 'granted' })
+        }
+      } catch (e) {}
+      gtag('js', new Date())
+      gtag('config', 'G-X8PYS8QPEQ', { send_page_view: false })
+    </script>
+    <script type="module" crossorigin src="/assets/index-BEN0s0xG.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DFYxJmhg.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

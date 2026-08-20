@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap — update URL after choosing domain
+Sitemap: https://addpattern.pl/sitemap.xml

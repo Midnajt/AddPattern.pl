@@ -22,16 +22,21 @@ const IMAGES: Record<string, string> = {
   pianos: asset('assets/piano.jpeg'),
   dental: asset('assets/clinic.png'),
   kwiaciarnia: asset('assets/flowers.jpg'),
+  djmatt: asset('assets/gallery-1.jpg'),
+  dorota: asset('assets/5F4A6221.jpg'),
+}
+
+type Project = {
+  id: string
+  name: string
+  cat: string
+  url: string
 }
 
 export default function Portfolio() {
   const { t } = useTranslation()
-  const items = t('portfolio.items', { returnObjects: true }) as Array<{
-    id: string
-    name: string
-    cat: string
-    url: string
-  }>
+  const items = t('portfolio.items', { returnObjects: true }) as Project[]
+  const projects = [...items].sort((a, b) => Number(b.id === 'dental') - Number(a.id === 'dental'))
 
   return (
     <section id="portfolio" className="py-28 section-padding bg-surface">
@@ -60,7 +65,7 @@ export default function Portfolio() {
           viewport={{ once: true, amount: 0.1 }}
           className="grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
-          {items.map((project) => (
+          {projects.map((project) => (
             <motion.a
               key={project.id}
               variants={item}
@@ -70,7 +75,6 @@ export default function Portfolio() {
               className="group relative overflow-hidden rounded-3xl aspect-[4/3] block"
               whileHover="hover"
             >
-              {/* Image */}
               <motion.img
                 src={IMAGES[project.id]}
                 alt={project.name}
@@ -80,34 +84,26 @@ export default function Portfolio() {
                 }}
               />
 
-              {/* Default overlay — always slightly visible */}
               <div className="absolute inset-0 bg-gradient-to-t from-surface-bg/80 via-surface-bg/20 to-transparent" />
 
-              {/* Category pill */}
               <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-bg/70 backdrop-blur-sm border border-surface-border text-xs font-display font-semibold text-text-secondary">
                 {project.cat}
               </div>
 
-              {/* Hover overlay */}
               <motion.div
                 className="absolute inset-0 flex flex-col justify-end p-7"
                 variants={{
                   hover: { transition: { staggerChildren: 0.06 } },
                 }}
               >
-                <motion.p
-                  className="font-display font-bold text-xl text-white mb-2 translate-y-4 opacity-80 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400"
-                >
+                <motion.p className="font-display font-bold text-xl text-white mb-2 translate-y-4 opacity-80 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400">
                   {project.name}
                 </motion.p>
-                <motion.span
-                  className="font-body text-sm text-brand-primary translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400 delay-75"
-                >
+                <motion.span className="font-body text-sm text-brand-primary translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-400 delay-75">
                   {t('portfolio.visit')}
                 </motion.span>
               </motion.div>
 
-              {/* Gradient border on hover */}
               <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-brand-primary/40 transition-colors duration-300 pointer-events-none" />
             </motion.a>
           ))}

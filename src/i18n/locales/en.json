@@ -84,6 +84,18 @@
         "name": "kwiaciarniawwildze.pl",
         "cat": "Business card site",
         "url": "https://kwiaciarniawwildze.pl"
+      },
+      {
+        "id": "djmatt",
+        "name": "DJ Matt",
+        "cat": "Business card site",
+        "url": "https://midnajt.github.io/DjMattWebsite/"
+      },
+      {
+        "id": "dorota",
+        "name": "Dorota & Marcin",
+        "cat": "Wedding site",
+        "url": "https://midnajt.github.io/ExampleWeddingSite/"
       }
     ],
     "visit": "Visit site →"

@@ -84,6 +84,18 @@
         "name": "kwiaciarniawwildze.pl",
         "cat": "Strona wizytówkowa",
         "url": "https://kwiaciarniawwildze.pl"
+      },
+      {
+        "id": "djmatt",
+        "name": "DJ Matt",
+        "cat": "Strona wizytówkowa",
+        "url": "https://midnajt.github.io/DjMattWebsite/"
+      },
+      {
+        "id": "dorota",
+        "name": "Dorota & Marcin",
+        "cat": "Strona weselna",
+        "url": "https://midnajt.github.io/ExampleWeddingSite/"
       }
     ],
     "visit": "Odwiedź stronę →"

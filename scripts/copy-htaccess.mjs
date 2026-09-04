@@ -15,3 +15,10 @@ if (!existsSync(src)) {
 mkdirSync(destDir, { recursive: true })
 copyFileSync(src, dest)
 console.log('Copied public/.htaccess → dist/.htaccess')
+
+const indexHtml = join(destDir, 'index.html')
+const notFound = join(destDir, '404.html')
+if (existsSync(indexHtml)) {
+  copyFileSync(indexHtml, notFound)
+  console.log('Copied dist/index.html → dist/404.html')
+}

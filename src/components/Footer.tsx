@@ -1,6 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { asset } from '../lib/assets'
+import Picture from './Picture'
 import { isAnalyticsConfigured, openCookieSettings } from '../lib/analytics'
 
 export default function Footer() {
@@ -18,7 +19,13 @@ export default function Footer() {
     <footer className="border-t border-surface-border bg-surface-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-8 py-10 flex flex-col sm:flex-row items-center justify-between gap-4">
         <div className="flex items-center gap-3">
-          <img src={asset('logo_icon.png')} alt="AddPattern" className="h-7 w-auto opacity-70" />
+          <Picture
+            src={asset('logo_icon.png')}
+            alt=""
+            width={28}
+            height={28}
+            className="h-7 w-7 object-contain opacity-70"
+          />
           <span className="text-text-muted text-sm font-body">{t('footer.tagline')}</span>
         </div>
 
@@ -26,14 +33,14 @@ export default function Footer() {
           <Link
             to="/dla-devow"
             onClick={() => scrollIfSame('/dla-devow')}
-            className="hover:text-brand-primary transition-colors"
+            className="hover:text-brand-primary transition-colors rounded-sm"
           >
             {t('nav.forDevs')}
           </Link>
           <Link
             to="/polityka-cookies"
             onClick={() => scrollIfSame('/polityka-cookies')}
-            className="hover:text-brand-primary transition-colors"
+            className="hover:text-brand-primary transition-colors rounded-sm"
           >
             {t('footer.cookies')}
           </Link>
@@ -41,7 +48,7 @@ export default function Footer() {
             <button
               type="button"
               onClick={openCookieSettings}
-              className="hover:text-brand-primary transition-colors"
+              className="hover:text-brand-primary transition-colors rounded-sm"
             >
               {t('footer.cookieSettings')}
             </button>

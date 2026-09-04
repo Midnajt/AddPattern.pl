@@ -23,9 +23,10 @@ export default function CookiesPage() {
       <Helmet>
         <title>{t('cookies.metaTitle')}</title>
         <meta name="description" content={t('cookies.metaDesc')} />
+        <link rel="canonical" href="https://addpattern.pl/polityka-cookies" />
       </Helmet>
 
-      <section className="section-padding pt-32 pb-28">
+      <section id="main-content" className="section-padding pt-32 pb-28">
         <motion.article
           initial="hidden"
           animate="show"

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import LanguageSwitch from './LanguageSwitch'
 import { asset } from '../lib/assets'
+import Picture from './Picture'
 
 const NAV_ITEMS = ['offer', 'portfolio', 'process', 'contact'] as const
 
@@ -60,10 +61,13 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-8 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link to="/" onClick={goHome} className="flex items-center group" aria-label="AddPattern — strona główna">
-            <img
+            <Picture
               src={asset('logo_icon.png')}
-              alt="AddPattern"
-              className="h-14 w-auto opacity-90 group-hover:opacity-100 transition-opacity"
+              alt=""
+              width={56}
+              height={56}
+              loading="eager"
+              className="h-14 w-14 object-contain opacity-90 group-hover:opacity-100 transition-opacity"
             />
           </Link>
 
@@ -74,7 +78,7 @@ export default function Navbar() {
                 <button
                   key={key}
                   onClick={() => scrollTo(key)}
-                  className="text-sm font-body text-text-secondary hover:text-white transition-colors duration-200"
+                  className="text-sm font-body text-text-secondary hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary rounded-sm"
                 >
                   {t(`nav.${key}`)}
                 </button>
@@ -82,7 +86,7 @@ export default function Navbar() {
                 <Link
                   key={key}
                   to={`/#${key}`}
-                  className="text-sm font-body text-text-secondary hover:text-white transition-colors duration-200"
+                  className="text-sm font-body text-text-secondary hover:text-white transition-colors duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary rounded-sm"
                 >
                   {t(`nav.${key}`)}
                 </Link>
@@ -106,7 +110,9 @@ export default function Navbar() {
           <button
             className="md:hidden p-2 text-text-secondary hover:text-white transition-colors"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            aria-label={mobileOpen ? 'Zamknij menu' : 'Otwórz menu'}
           >
             <span className="block w-5 h-0.5 bg-current mb-1 transition-all" />
             <span className="block w-5 h-0.5 bg-current mb-1 transition-all" />
@@ -123,17 +129,29 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.2 }}
+            id="mobile-nav"
             className="fixed top-16 left-0 right-0 z-40 bg-surface-bg/98 backdrop-blur-md border-b border-surface-border px-6 pb-6 pt-4 flex flex-col gap-4 md:hidden"
           >
-            {NAV_ITEMS.map((key) => (
-              <button
-                key={key}
-                onClick={() => scrollTo(key)}
-                className="text-left text-base font-body text-text-secondary hover:text-white transition-colors"
-              >
-                {t(`nav.${key}`)}
-              </button>
-            ))}
+            {NAV_ITEMS.map((key) =>
+              isHome ? (
+                <button
+                  key={key}
+                  onClick={() => scrollTo(key)}
+                  className="text-left text-base font-body text-text-secondary hover:text-white transition-colors"
+                >
+                  {t(`nav.${key}`)}
+                </button>
+              ) : (
+                <Link
+                  key={key}
+                  to={`/#${key}`}
+                  onClick={() => setMobileOpen(false)}
+                  className="text-left text-base font-body text-text-secondary hover:text-white transition-colors"
+                >
+                  {t(`nav.${key}`)}
+                </Link>
+              ),
+            )}
             <Link
               to="/dla-devow"
               className="text-base font-body text-brand-primary"

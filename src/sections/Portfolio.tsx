@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { asset } from '../lib/assets'
+import Picture from '../components/Picture'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -20,7 +21,6 @@ const item = {
 const IMAGES: Record<string, string> = {
   wesele: asset('assets/weeding.jpg'),
   pianos: asset('assets/piano.jpeg'),
-  dental: asset('assets/clinic.png'),
   kwiaciarnia: asset('assets/flowers.jpg'),
   djmatt: asset('assets/gallery-1.jpg'),
   dorota: asset('assets/5F4A6221.jpg'),
@@ -75,16 +75,49 @@ export default function Portfolio() {
               className="group relative overflow-hidden rounded-3xl aspect-[4/3] block"
               whileHover="hover"
             >
-              <motion.img
-                src={IMAGES[project.id]}
-                alt={project.name}
-                className="w-full h-full object-cover"
-                variants={{
-                  hover: { scale: 1.06, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
-                }}
-              />
+              {project.id === 'dental' ? (
+                <motion.div
+                  className="relative w-full h-full"
+                  style={{
+                    background:
+                      'radial-gradient(600px 280px at 90% 10%, #7ec8b829, transparent 60%), linear-gradient(160deg, #141018 0%, #3d1f48 70%, #2a3d3a 100%)',
+                  }}
+                  variants={{
+                    hover: { scale: 1.04, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+                  }}
+                >
+                  <img
+                    src={asset('assets/dental-passion-logo.png')}
+                    alt={project.name}
+                    width={240}
+                    height={52}
+                    className="absolute inset-0 m-auto w-[58%] max-w-[280px] h-auto object-contain"
+                  />
+                </motion.div>
+              ) : (
+                <motion.div
+                  className="w-full h-full"
+                  variants={{
+                    hover: { scale: 1.06, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] } },
+                  }}
+                >
+                  <Picture
+                    src={IMAGES[project.id]}
+                    alt={project.name}
+                    width={1200}
+                    height={900}
+                    className="w-full h-full object-cover"
+                  />
+                </motion.div>
+              )}
 
-              <div className="absolute inset-0 bg-gradient-to-t from-surface-bg/80 via-surface-bg/20 to-transparent" />
+              <div
+                className={
+                  project.id === 'dental'
+                    ? 'absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent'
+                    : 'absolute inset-0 bg-gradient-to-t from-surface-bg/80 via-surface-bg/20 to-transparent'
+                }
+              />
 
               <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-bg/70 backdrop-blur-sm border border-surface-border text-xs font-display font-semibold text-text-secondary">
                 {project.cat}

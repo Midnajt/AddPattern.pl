@@ -19,7 +19,7 @@ export default {
         text: {
           DEFAULT: '#FFFFFF',
           secondary: '#B9C1D9',
-          muted: '#8B93A7',
+          muted: '#A8B0C4',
           disabled: '#60697D',
         },
       },

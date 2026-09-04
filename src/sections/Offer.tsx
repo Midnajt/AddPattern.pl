@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { asset } from '../lib/assets'
+import Picture from '../components/Picture'
 
 const sectionVariants = {
   hidden: { opacity: 0, y: 40 },
@@ -105,15 +106,21 @@ export default function Offer() {
           className="mb-16"
         >
           {/* Large brand logo */}
-          <motion.img
-            src={asset('logo.png')}
-            alt="AddPattern"
+          <motion.div
             initial={{ opacity: 0, y: -16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-            className="h-80 sm:h-96 lg:h-[32rem] w-auto mx-auto mb-12 opacity-90"
-          />
+            className="mb-12"
+          >
+            <Picture
+              src={asset('logo.png')}
+              alt="AddPattern"
+              width={720}
+              height={720}
+              className="h-80 sm:h-96 lg:h-[32rem] w-auto mx-auto opacity-90"
+            />
+          </motion.div>
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
             {t('offer.title')}
           </h2>

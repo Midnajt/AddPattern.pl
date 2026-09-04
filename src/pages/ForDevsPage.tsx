@@ -3,6 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { asset } from '../lib/assets'
 import InterestsCarousel from '../components/InterestsCarousel'
+import Picture from '../components/Picture'
+import JsonLd from '../components/JsonLd'
+import { personJsonLd } from '../lib/jsonld'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
@@ -57,9 +60,9 @@ export default function ForDevsPage() {
           name="description"
           content="Web Developer z 4+ latami doświadczenia — React, TypeScript, Node.js. Rekrutacja i networking."
         />
-        <link rel="canonical" href="https://addpattern.pl/#/dla-devow" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://addpattern.pl/#/dla-devow" />
+        <link rel="canonical" href="https://addpattern.pl/dla-devow" />
+        <meta property="og:type" content="profile" />
+        <meta property="og:url" content="https://addpattern.pl/dla-devow" />
         <meta property="og:title" content="Marcin Krzysztoszek — Web Developer | AddPattern" />
         <meta
           property="og:description"
@@ -69,13 +72,19 @@ export default function ForDevsPage() {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="https://addpattern.pl/og-image.jpg" />
       </Helmet>
+      <JsonLd data={personJsonLd} />
 
       {/* Hero top with bg image */}
+      <main id="main-content">
       <section className="relative pt-32 pb-20 section-padding overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img
+          <Picture
             src={asset('assets/pc2.jpg')}
             alt=""
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
             className="w-full h-full object-cover object-center opacity-20"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-surface-bg/70 to-surface-bg" />
@@ -97,9 +106,12 @@ export default function ForDevsPage() {
           >
             {/* Avatar */}
             <motion.div variants={fadeUp} className="shrink-0">
-              <img
+              <Picture
                 src={asset('avatar.png')}
                 alt="Marcin Krzysztoszek"
+                width={160}
+                height={160}
+                loading="eager"
                 className="w-32 h-32 lg:w-40 lg:h-40 rounded-3xl object-cover border-2 border-brand-primary/40 shadow-glow"
               />
             </motion.div>
@@ -346,6 +358,7 @@ export default function ForDevsPage() {
           </div>
         </div>
       </section>
+      </main>
     </>
   )
 }

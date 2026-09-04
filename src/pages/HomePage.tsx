@@ -1,5 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useTranslation } from 'react-i18next'
+import JsonLd from '../components/JsonLd'
+import { homeJsonLd } from '../lib/jsonld'
 import Hero from '../sections/Hero'
 import Offer from '../sections/Offer'
 import Portfolio from '../sections/Portfolio'
@@ -39,8 +41,9 @@ export default function HomePage() {
         <meta name="twitter:image" content="https://addpattern.pl/og-image.jpg" />
         <html lang={t('nav.offer') === 'Services' ? 'en' : 'pl'} />
       </Helmet>
+      <JsonLd data={homeJsonLd} />
 
-      <main>
+      <main id="main-content">
         <Hero />
         <Offer />
         <Portfolio />

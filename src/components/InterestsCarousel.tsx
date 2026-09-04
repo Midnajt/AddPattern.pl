@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { asset } from '../lib/assets'
+import Picture from './Picture'
 
 const SLIDE_FILES = [
   '2.jfif',
@@ -89,9 +90,11 @@ export default function InterestsCarousel() {
               transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
               className="absolute inset-0 cursor-zoom-in"
             >
-              <img
+              <Picture
                 src={SLIDES[index]}
                 alt=""
+                width={1600}
+                height={900}
                 className="h-full w-full object-cover"
                 draggable={false}
               />
@@ -187,17 +190,24 @@ export default function InterestsCarousel() {
               ›
             </button>
 
-            <motion.img
+            <motion.div
               key={SLIDES[index]}
-              src={SLIDES[index]}
-              alt=""
               initial={{ opacity: 0, scale: 0.97 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.97 }}
               transition={{ duration: 0.25 }}
               onClick={(e) => e.stopPropagation()}
-              className="max-h-[90vh] max-w-[min(96vw,1200px)] rounded-2xl object-contain shadow-glow"
-            />
+              className="max-h-[90vh] max-w-[min(96vw,1200px)]"
+            >
+              <Picture
+                src={SLIDES[index]}
+                alt=""
+                width={1600}
+                height={900}
+                loading="eager"
+                className="max-h-[90vh] max-w-[min(96vw,1200px)] rounded-2xl object-contain shadow-glow"
+              />
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

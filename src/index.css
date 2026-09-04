@@ -13,7 +13,7 @@
   --border: #2A2E39;
   --text: #FFFFFF;
   --text-secondary: #B9C1D9;
-  --text-muted: #8B93A7;
+  --text-muted: #A8B0C4;
   --brand-gradient: linear-gradient(135deg, #32D6D1 0%, #3E8EFF 35%, #7B5CFF 70%, #D87AFB 100%);
   /* Brighter stops for clipped text — better contrast on dark surfaces */
   --brand-gradient-text: linear-gradient(135deg, #5AF0EB 0%, #6BA3FF 40%, #A08CFF 72%, #E9A0FF 100%);
@@ -24,6 +24,26 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 3px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
   }
 
   body {
@@ -40,6 +60,24 @@
 }
 
 @layer utilities {
+  .skip-link {
+    position: absolute;
+    left: 1rem;
+    top: -100px;
+    z-index: 100;
+    padding: 0.6rem 1rem;
+    border-radius: 0.75rem;
+    background: var(--brand-gradient);
+    color: var(--background);
+    font-family: 'Sora', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
   .text-gradient {
     background: var(--brand-gradient-text);
     -webkit-background-clip: text;

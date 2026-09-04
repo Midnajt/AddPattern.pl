@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { asset } from '../lib/assets'
+import Picture from '../components/Picture'
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -9,9 +10,11 @@ export default function Contact() {
     <section id="contact" className="relative py-36 section-padding overflow-hidden">
       {/* Background — Warsaw sunset full-bleed */}
       <div className="absolute inset-0 z-0">
-        <img
+        <Picture
           src={asset('assets/warsaw-sunset.jpg')}
           alt=""
+          width={1920}
+          height={1080}
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-bg via-surface-bg/80 to-surface-bg/60" />

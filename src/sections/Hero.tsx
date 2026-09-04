@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { asset } from '../lib/assets'
+import Picture from '../components/Picture'
 
 const container = {
   hidden: {},
@@ -42,9 +43,13 @@ export default function Hero() {
         transition={{ duration: 8, ease: 'linear' }}
         className="absolute inset-0 z-0"
       >
-        <img
+        <Picture
           src={asset('assets/pc.jpg')}
           alt=""
+          width={1920}
+          height={1080}
+          loading="eager"
+          fetchPriority="high"
           className="w-full h-full object-cover object-center"
         />
         {/* Dark gradient overlay */}

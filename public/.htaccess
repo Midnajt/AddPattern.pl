@@ -11,6 +11,12 @@
   # Prefer apex domain (optional: www → non-www)
   RewriteCond %{HTTP_HOST} ^www\.addpattern\.pl$ [NC]
   RewriteRule ^ https://addpattern.pl%{REQUEST_URI} [L,R=301]
+
+  # Old HashRouter bookmarks: /#/dla-devow is handled in the app.
+  # SPA fallback — unknown paths → index.html (BrowserRouter)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ index.html [L]
 </IfModule>
 
 # Security / caching basics
